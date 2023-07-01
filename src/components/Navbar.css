@@ -1,0 +1,136 @@
+.navMenu {
+	position: fixed;
+	inset-block: 0;
+	left: -100%;
+	background-color: var(--container-color);
+	width: 100%;
+	padding: 60px 30px;
+	transition: all 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+
+.show-menu {
+	left: 0;
+}
+
+.navLink {
+	display: flex;
+	align-items: center;
+	column-gap: 24px;
+	border-bottom: 1px solid var(--border-color);
+	padding-block: 14px;
+}
+
+.navName,
+.navIcon {
+	color: var(--title-color);
+	font-size: 24px;
+}
+
+.navName {
+	font-weight: var(--weight-500);
+}
+
+.active-nav .navIcon,
+.active-nav .navName {
+	color: var(--first-color);
+}
+
+.navToggle {
+	position: fixed;
+	top: 30px;
+	right: 30px;
+	width: 40px;
+	height: 40px;
+	border-radius: 5px;
+	background-color: var(--container-color);
+	padding: 12px 10px;
+}
+
+.navToggle span {
+	display: block;
+	width: 20px;
+	height: 2px;
+	border-radius: 2px;
+	background-color: var(--title-color);
+	margin-bottom: 5px;
+}
+
+.animate-toggle span:first-child {
+	transform: rotate(45deg) translate(6px, 4px);
+}
+
+.animate-toggle span:nth-child(2) {
+	display: none;
+}
+
+.animate-toggle span:last-child {
+	transform: rotate(-45deg) translate(1px, 1px);
+}
+
+@media screen and (min-width: 1024px) {
+	.navMenu {
+		all: unset;
+	}
+
+	.navToggle {
+		display: none;
+	}
+
+	.nav {
+		position: fixed;
+		inset-block: 0;
+		right: 30px;
+		display: flex;
+		align-items: center;
+	}
+
+	.navItem {
+		margin-block: 24px;
+	}
+
+	.navLink {
+		padding: 0;
+		border-bottom: none;
+		background-color: var(--container-color);
+		width: 50px;
+		height: 50px;
+		border-radius: 50%;
+		position: relative;
+	}
+
+	.navIcon {
+		font-size: 20px;
+		margin-inline: auto;
+	}
+
+	.navName {
+		position: absolute;
+		top: 0;
+		right: 0;
+
+		background-color: var(--first-color);
+		height: 100%;
+		line-height: 50px;
+		padding-inline: 30px 25px;
+		border-radius: 30px;
+		font-size: var(--small-font-size);
+		color: var(--text-white);
+        opacity: 0;
+        visibility: hidden;
+        z-index: -1;
+        transition: all 0.3s ease;
+	}
+
+    
+	.navLink:hover .navName {
+        right: 30px;
+		color: var(--text-white);
+        opacity: 1;
+        visibility: visible;
+	}
+
+	.navLink:hover .navIcon,
+	.active-nav .navIcon {
+		color: var(--first-color);
+	}
+}

@@ -1,0 +1,161 @@
+/**** ========== Google Fonts =========== ****/
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@500;600;800&family=Rubik:wght@500;600;800;900&display=swap");
+
+/**** ========== CSS Variables =========== ****/
+
+:root {
+	/***============= Colors ==============***/
+	--first-color: #6a0dad;
+	--title-color: #808080;
+	--text-color: #a0a0a0;
+	--body-color: #dcdcdc;
+	--container-color: #fbfbf9;
+	--border-color: #f0f0f0;
+	--text-white: #fff;
+
+	/***============= Fonts & Typography ==============***/
+	--body-font: "Open Sans", sans-serif;
+	--second-font: "Rubik", sans-serif;
+	--big-font-size: 60px;
+	--h1-font-size: 50px;
+	--h2-font-size: 32px;
+	--h3-font-size: 24px;
+	--large-font-size: 20px;
+	--normal-font-size: 16px;
+	--small-font-size: 15px;
+	--extrasmall-font-size: 14px;
+	--tiny-font-size: 12px;
+
+	/***============= Fonts Weight ==============***/
+	--weight-400: 400;
+	--weight-500: 500;
+	--weight-600: 600;
+	--weight-700: 700;
+	--weight-800: 800;
+	--weight-900: 900;
+}
+
+/***============= Fonts Weight ==============***/
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body,
+input,
+textarea {
+	font-family: var(--body-font);
+	font-size: var(--normal-font-size);
+	font-weight: var(--weight-500);
+}
+
+body {
+	background-color: var(--body-color);
+	color: var(--text-color);
+}
+
+h1,
+h2,
+h3,
+h4 {
+	color: var(--title-color);
+	font-family: var(--second-font);
+	font-weight: var(--weight-700);
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+button,
+input,
+textarea {
+	background-color: transparent;
+	border: none;
+	outline: none;
+}
+img {
+	max-width: 100%;
+}
+
+/**** ========== Reuseable CSS  =========== ****/
+
+.container {
+	max-width: 1140px;
+	margin-inline: auto;
+	padding-inline: 15px;
+}
+
+.grid {
+	display: grid;
+	gap: 20px;
+}
+
+.section {
+	padding-block: 70px;
+}
+
+.sectionTitle {
+	font-size: var(--big-font-size);
+	font-weight: var(--weight-700);
+	text-align: center;
+	margin-bottom: 70px;
+}
+.sectionTitle span {
+	color: var(--first-color);
+}
+
+.button {
+	display: inline-block;
+	color: var(--first-color);
+	border: 1px solid var(--first-color);
+	padding: 15px 70px 15px 35px;
+	border-radius: 35px;
+	font-family: var(--second-font);
+	font-size: var(--small-font-size);
+	font-weight: var(--weight-500);
+	position: relative;
+	overflow: hidden;
+	transition: all 0.25s ease-in-out;
+}
+
+.button:hover {
+	color: var(--text-white);
+}
+
+.button::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background-color: var(--first-color);
+	transform: translateX(100%);
+	z-index: -1;
+	transition: all 0.3s ease-out;
+}
+
+.button:hover::before {
+	transform: translateX(0);
+}
+
+.buttonIcon {
+	background-color: var(--first-color);
+	position: absolute;
+	inset-block: 0;
+	right: 0px;
+	width: 55px;
+	height: 55px;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: var(--text-white);
+	font-size: var(--large-font-size);
+	text-align: center;
+	line-height: 1;
+}

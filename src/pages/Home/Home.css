@@ -1,0 +1,45 @@
+.home {
+	grid-template-columns: 5fr 8fr;
+	align-items: center;
+	padding: 40px;
+	height: 100vh;
+}
+
+.homeImg {
+	width: 100%;
+	border-radius: 30px;
+	object-fit: cover;
+	box-shadow: 0 0 8px rgba(0, 0, 0, 0.3);
+    z-index: 1;
+}
+
+.homeData {
+	max-width: 600px;
+	margin-inline: auto;
+	padding-top: 20px;
+}
+
+.homeTitle {
+	position: relative;
+	font-size: var(--h1-font-size);
+	line-height: 1.24;
+	/* padding-left: 70px; */
+}
+.homeTitle span {
+	color: var(--first-color);
+}
+
+.homeDescription {
+	line-height: 2.125;
+	margin-block: 16px 32px;
+}
+
+.colorBlock {
+	position: fixed;
+	height: 200%;
+	width: 100%;
+	background-color: var(--first-color);
+	top: -50%;
+    left: -83%;
+    transform: rotate(-15deg);
+}

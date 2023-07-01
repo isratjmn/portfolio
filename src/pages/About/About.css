@@ -1,0 +1,153 @@
+.aboutContainer,
+.infoList,
+.stats,
+.resumeContainer {
+	grid-template-columns: repeat(2, 1fr);
+    align-items: flex-start;
+}
+
+.infoItem {
+	row-gap: 10px;
+	margin-bottom: 15px;
+}
+
+.sectionSubTitle {
+	font-size: var(--h3-font-size);
+	font-weight: var(--weight-600);
+	margin-bottom: 20px;
+}
+
+.infoList .infoTitle,
+.infoList .infoDesription {
+	font-size: var(--small-font-size);
+}
+
+.infoList .infoDesription {
+	color: var(--title-color);
+	font-weight: var(--weight-600);
+}
+
+.statsBox {
+	border: 1px solid var(--border-color);
+	padding: 20px 30px 25px;
+	border-radius: 5px;
+}
+
+.statsNo {
+	color: var(--first-color);
+	font-size: var(--h1-font-size);
+	line-height: 1.2;
+}
+
+.statsTitle {
+	font-size: var(--small-font-size);
+	line-height: 1.6;
+	padding-left: 45px;
+	position: relative;
+}
+
+.statsTitle::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 25%;
+	width: 30px;
+	height: 1px;
+	background-color: var(--text-color);
+}
+
+.separator {
+	border-top: 1px solid var(--border-color);
+	max-width: 40%;
+	margin: 72px auto 56px;
+}
+
+.subtitleCenter {
+	text-align: center;
+	margin-bottom: 50px;
+}
+
+.skillsContainer {
+	grid-template-columns: repeat(4, 1fr);
+	justify-items: center;
+	row-gap: 48px;
+}
+
+.progressCircle {
+	width: 120px;
+	height: 120px;
+}
+
+.CircularProgressbar-path {
+	stroke: var(--first-color) !important;
+	stroke-linecap: butt !impotant;
+}
+
+.CircularProgressbar-trail {
+	stroke: var(--container-color) !important;
+}
+
+.CircularProgressbar-text {
+	fill: var(--title-color) !important;
+	font-family: var(--second-font);
+	font-size: var(--large-font-size) !important;
+}
+
+.skillsTitle {
+	font-family: var(--body-font);
+	font-size: var(--normal-font-size) !important;
+	font-weight: var(--weight-700);
+	text-align: center;
+	margin-top: 24px;
+}
+
+.resumeItem {
+	position: relative;
+	padding-left: 60px;
+}
+
+.resumeItem:not(:last-child) {
+	margin-bottom: 50px;
+}
+
+.resumeItem::before {
+	content: "";
+	position: absolute;
+	inset-block: 0;
+	left: 20px;
+	border-left: 2px solid var(--border-color);
+}
+
+.resumeIcon {
+	position: absolute;
+	left: 0;
+	top: 0;
+	background-color: var(--first-color);
+	color: var(--text-color);
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 40px;
+}
+
+.resumeDate {
+	background-color: var(--container-color);
+	padding: 2px 10px;
+	border-radius: 15px;
+	font-size: var(--tiny-font-size);
+	font-weight: var(--weight-600);
+}
+
+.resumeSubTitle {
+	font-size: var(--large-font-size);
+	font-weight: var(--weight-600);
+	margin-block: 20px 10px;
+}
+
+.resumeDesc {
+    font-size: var(--small-font-size);
+    line-height: 1.6;
+}
+
+
