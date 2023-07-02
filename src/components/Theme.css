@@ -1,0 +1,85 @@
+.style-switcher {
+	position: fixed;
+	left: 0;
+	top: 10%;
+	background-color: rgb(253, 253, 253);
+	width: 220px;
+	padding: 15px;
+	box-shadow: 0 0 4px #cccccc;
+	z-index: 10;
+	transform: translateX(-100%);
+	transition: all 0.3s ease;
+}
+
+.show-switcher{
+	transform: translateX(0);
+}
+
+.style-switcher,
+.style-switcherToggler,
+.theme-toggler {
+	border-radius: 0 5px 5px 0;
+}
+
+.style-switcherItems {
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	column-gap: 4px;
+	row-gap: 8px;
+}
+
+.style-switcherTitle,
+.style-switcherToggler,
+.theme-toggler,
+.style-switcherClose {
+	color: hsl(0, 0%, 40%);
+}
+
+.style-switcherTitle {
+	font-size: var(--small-font-size);
+	font-weight: var(--weight-600);
+	border-bottom: 2px solid hsl(0, 0%, 87%);
+	padding-bottom: 5px;
+	margin-bottom: 15px;
+}
+
+.theme-img {
+	width: 30px;
+	cursor: pointer;
+}
+
+.style-switcherToggler,
+.theme-toggler {
+	position: absolute;
+	left: 100%;
+	background-color: var(--text-white);
+	height: 50px;
+	width: 50px;
+	font-size: var(--large-font-size);
+	cursor: pointer;
+	display: grid;
+	place-items: center;
+	box-shadow: 0 0 2px hsl(0, 0%, 80%);
+	transition: all 0.3s ease;
+}
+
+.show-switcher .style-switcherToggler, 
+.show-switcher .theme-toggler {
+    left: -100%;
+
+}
+.style-switcherToggler {
+	top: 10%;
+}
+
+.theme-toggler {
+	bottom: 10%;
+}
+
+.style-switcherClose {
+	cursor: pointer;
+	font-size: var(--h2-font-size);
+	position: absolute;
+	top: 2%;
+	right: 15px;
+}
