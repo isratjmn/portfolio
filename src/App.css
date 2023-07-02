@@ -12,6 +12,8 @@
 	--container-color: #fbfbf9;
 	--border-color: #f0f0f0;
 	--text-white: #fff;
+	--text-black: #000;
+
 
 	/***============= Fonts & Typography ==============***/
 	--body-font: "Open Sans", sans-serif;
@@ -24,7 +26,7 @@
 	--normal-font-size: 16px;
 	--small-font-size: 15px;
 	--extrasmall-font-size: 14px;
-	--tiny-font-size: 12px;
+	--tiny-font-size: 13px;
 
 	/***============= Fonts Weight ==============***/
 	--weight-400: 400;
@@ -60,9 +62,9 @@ h1,
 h2,
 h3,
 h4 {
-	color: var(--title-color);
+	color: var(--text-black);
 	font-family: var(--second-font);
-	font-weight: var(--weight-700);
+	font-weight: var(--weight-600);
 }
 
 ul {
@@ -87,7 +89,7 @@ img {
 /**** ========== Reuseable CSS  =========== ****/
 
 .container {
-	max-width: 1140px;
+	max-width: 1240px;
 	margin-inline: auto;
 	padding-inline: 15px;
 }

@@ -1,0 +1,98 @@
+.contactContainer {
+	grid-template-columns: 4fr 8fr;
+}
+
+.contactTitle {
+	font-size: var(--h3-font-size);
+	font-weight: var(--weight-700);
+	margin-bottom: 16px;
+}
+
+.contactDesc {
+	font-size: var(--small-font-size);
+	line-height: 1.6;
+}
+
+.contactDesc,
+.contactInfo .infoItem {
+	margin-bottom: 20px;
+}
+
+.contactInfo .infoItem {
+	display: flex;
+	align-items: center;
+	column-gap: 16px;
+}
+
+.contactInfo .infoIcon {
+	color: var(--first-color);
+	font-size: 24px;
+}
+
+.contactInfo .infoTitle {
+	font-size: var(--small-font-size);
+	font-size: var(--h3-font-size);
+}
+
+.contactInfo .infoDesc {
+	font-family: var(--body-font);
+	font-size: var(--small-font-size);
+	font-weight: var(--weight-500);
+}
+
+.contactSocials {
+	display: flex;
+	column-gap: 16px;
+}
+
+.contactSocial-links {
+	background-color: var(--container-color) !important;
+	color: var(--first-color);
+	width: 45px;
+	height: 45px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 44px;
+	transition: all 0.3s ease;
+	border: 2px solid var(--first-color);
+}
+
+.contactSocial-links:hover {
+	background-color: var(--first-color) !important;
+	color: var(--text-white);
+}
+
+.formInput-group {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	column-gap: 20px;
+}
+
+.formInput-div {
+	margin-bottom: 30px;
+}
+
+.form-control {
+	border: 2px solid var(--container-color);
+	background-color: var(--container-color);
+	color: var(--title-color);
+	width: 100%;
+	padding: 12px 24px;
+	border-radius: 8px;
+	font-size: var(--small-font-size);
+	transition: all 0.3s ease;
+}
+
+.form-control:focus {
+	border-color: var(--first-color);
+}
+
+.textarea {
+	resize: none;
+	height: 160px;
+}
+
+.contactButton-icon {
+	font-size: var(--h3-font-size);
+	line-height: 64px;
+}
