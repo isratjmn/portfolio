@@ -22,7 +22,7 @@ const About = () => {
 						<ul className="infoList grid">
 							<Info />
 						</ul>
-						<a href={Resume} download="" className="button">
+						<a href={Resume} download className="button">
 							Download Resume
 							<span className="buttonIcon">
 								<FaDownload />

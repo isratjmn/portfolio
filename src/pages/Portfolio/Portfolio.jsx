@@ -120,7 +120,7 @@ const Portfolio = () => {
 														style={{
 															fontSize: "16px",
 															fontWeight: "500",
-															marginRight: "10px",
+															marginRight: "8px",
 														}}
 													>
 														Client
@@ -131,7 +131,7 @@ const Portfolio = () => {
 
 											<a
 												style={{ fontSize: "20px" }}
-												href={clientGithub}
+												href={serverGithub}
 												target="_blank"
 											>
 												<div
@@ -144,7 +144,7 @@ const Portfolio = () => {
 														style={{
 															fontSize: "16px",
 															fontWeight: "500",
-															marginRight: "10px",
+															marginRight: "8px",
 														}}
 													>
 														server
@@ -161,14 +161,14 @@ const Portfolio = () => {
 													style={{
 														fontSize: "16px",
 														fontWeight: "500",
-														marginRight: "10px",
+														marginRight: "8px",
 													}}
 												>
 													<span
 														style={{
 															fontSize: "16px",
 															fontWeight: "500",
-															marginRight: "10px",
+															marginRight: "8px",
 														}}
 													>
 														Live Demo

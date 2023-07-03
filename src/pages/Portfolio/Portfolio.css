@@ -4,7 +4,6 @@
 	gap: 15px;
 }
 
-
 .btn-primary:hover {
 	background-color: var(--first-color);
 	color: var(--text-white);

@@ -114,11 +114,10 @@
 		position: absolute;
 		top: 0;
 		right: 0;
-
 		background-color: var(--first-color);
 		height: 100%;
 		line-height: 50px;
-		padding-inline: 30px 25px;
+		padding-inline: 25px 35px;
 		border-radius: 30px;
 		font-size: var(--small-font-size);
 		color: var(--text-white);
@@ -129,7 +128,7 @@
 	}
 
 	.navLink:hover .navName {
-		right: 30px;
+		right: 20px;
 		color: var(--text-white);
 		opacity: 1;
 		visibility: visible;

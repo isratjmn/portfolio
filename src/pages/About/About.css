@@ -4,6 +4,9 @@
 	grid-template-columns: repeat(2, 1fr);
 	align-items: flex-start;
 }
+.infoList {
+	margin-bottom: 10px;
+}
 
 .infoItem {
 	row-gap: 10px;

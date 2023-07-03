@@ -109,25 +109,25 @@ export const personalInfo = [
 export const stats = [
 	{
 		id: 1,
-		no: "1+",
+		no: "1",
 		title: "Years of <br /> Experience",
 	},
 
 	{
 		id: 2,
-		no: "30+",
+		no: "30",
 		title: "Completed <br /> Projects",
 	},
 
 	{
 		id: 3,
-		no: "5+",
+		no: "5",
 		title: "Happy <br /> Customers",
 	},
 
 	{
 		id: 4,
-		no: "1+",
+		no: "1",
 		title: " Awards <br /> Won",
 	},
 ];
@@ -159,7 +159,7 @@ export const resume = [
 		title: "Complete Web Developement <br> Programming Hero</br>",
 		desc: "Build full-stack web applications using MongoDB, Express.js, React, and Node.js. It includes video tutorials, coding exercises, and projects for hands-on learning. Completion of the course equips learners with skills to create robust applications using the MERN stack.",
 	},
-
+	
 	{
 		id: 5,
 		category: "education",
