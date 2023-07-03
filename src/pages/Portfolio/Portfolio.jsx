@@ -14,7 +14,6 @@ import { RingLoader } from "react-spinners";
 const portfolio = [
 	{
 		id: 1,
-		img: "https://i.ibb.co/q1Qq1C6/Jazz-Yoga-Camp.png",
 		img: PortfolioImg1,
 		title: "Summer Yoga Camp | Nurture Mind, Body, and Spirit",
 		clientGithub: "https://github.com/isratjmn/jazz-yoga-camp-client",
