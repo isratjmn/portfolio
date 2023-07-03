@@ -182,6 +182,7 @@
 }
 
 @media screen and (max-width: 576px) {
+
 	.navToggle {
 		top: 20px;
 		right: 25px;
@@ -240,6 +241,10 @@
 	.home {
 		margin-block: auto;
 		align-items: left;
+	}
+	
+	.section {
+		margin-bottom: 100px;
 	}
 
 	.homeTitle {

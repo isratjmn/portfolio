@@ -2,7 +2,6 @@ import React from "react";
 import Info from "../../components/Info";
 import { FaDownload } from "react-icons/fa";
 import Statss from "../../components/Statss";
-import Resume from "../../assets/Resume.pdf";
 import Skills from "../../components/Skills";
 import { resume } from "../../data";
 import ResumeItems from "../../components/ResumeItems";
@@ -22,12 +21,7 @@ const About = () => {
 						<ul className="infoList grid">
 							<Info />
 						</ul>
-						<a href={Resume} download className="button">
-							Download Resume
-							<span className="buttonIcon">
-								<FaDownload />
-							</span>
-						</a>
+
 					</div>
 					<div className="stats grid">
 						<Statss />

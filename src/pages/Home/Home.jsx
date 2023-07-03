@@ -4,6 +4,8 @@ import { FaArrowRight } from "react-icons/fa";
 import { Link } from "react-router-dom";
 import "./Home.css";
 import ParticlesContainer from "../../components/ParticlesContainer";
+import Resume from "../../assets/Resume.pdf";
+import { FaDownload } from "react-icons/fa";
 
 const Home = () => {
 	return (
@@ -17,13 +19,14 @@ const Home = () => {
 							<span>I'm Israt Moonmoon</span> <br />
 							<span
 								style={{
-									fontSize: "26px",
+									fontSize: "32px",
 									color: "hsl(0, 0%, 50%)",
 								}}
 							>
 								Mern-Stack Developer
 							</span>
 						</h1>
+
 						<p className="homeDescription">
 							As a Self-taught programmer, I have developed
 							proficiency in the MERN stack and possess a solid
@@ -35,6 +38,12 @@ const Home = () => {
 							to deliver seamless user experiences and effectively
 							interact with backend services.
 						</p>
+						<a href={Resume} download className="button">
+							Download Resume
+							<span className="buttonIcon">
+								<FaDownload />
+							</span>
+						</a>
 						<Link to="/about" className="button">
 							More About Me
 							<span className="buttonIcon">
