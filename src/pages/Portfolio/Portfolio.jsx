@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./Portfolio.css";
 import PortfolioImg1 from "../../assets/JazzYogaCamp.png";
 import PortfolioImg2 from "../../assets/TQuestHome.png";
@@ -8,6 +8,8 @@ import PortfolioImg5 from "../../assets/legalsolution.png";
 import PortfolioImg6 from "../../assets/book-store.webp";
 import { TbBrandGithubFilled } from "react-icons/tb";
 import { TbUnlink } from "react-icons/tb";
+import ParticlesContainer from "../../components/ParticlesContainer";
+import { RingLoader } from "react-spinners";
 
 const portfolio = [
 	{
@@ -55,110 +57,134 @@ const portfolio = [
 		title: "BookStore | Curated Collections for Book Lovers",
 		clientGithub: "https://github.com/isratjmn/g3_architects",
 		demo: "https://bright-bublanina.netlify.app/",
-	}
+	},
 ];
 
 const Portfolio = () => {
-	return (
-		<section className="section container">
-			<h2 className="sectionTitle">
-				My
-				<span> Portfolio</span>
-			</h2>
-			<div className="portfolioContainer grid">
-				{portfolio.map(
-					({ id, img, title, clientGithub, serverGithub, demo }) => {
-						return (
-							<article key={id} className="portfolioItem">
-								<div className="card">
-									<div className="portfolioItem-img">
-										<img
-											className="portfolioItem-img"
-											src={img}
-											alt="portfolio1"
-										/>
-									</div>
-								</div>
-								<h3>{title}</h3>
-								<div className="links">
-									<a
-										style={{ fontSize: "20px" }}
-										href={clientGithub}
-										target="_blank"
-									>
-										<div
-											style={{
-												display: "flex",
-												alignItems: "center",
-											}}
-										>
-											<span
-												style={{
-													fontSize: "16px",
-													fontWeight: "700",
-													marginRight: "10px",
-												}}
-											>
-												Client
-											</span>
-											<TbBrandGithubFilled />
-										</div>
-									</a>
+	const [loading, setLoading] = useState(true);
 
-									<a
-										style={{ fontSize: "20px" }}
-										href={clientGithub}
-										target="_blank"
-									>
-										<div
-											style={{
-												display: "flex",
-												alignItems: "center",
-											}}
-										>
-											<span
-												style={{
-													fontSize: "16px",
-													fontWeight: "700",
-													marginRight: "10px",
-												}}
-											>
-												server
-											</span>
-											<TbBrandGithubFilled />
+	useEffect(() => {
+		setTimeout(() => {
+			setLoading(false);
+		}, 2000);
+	}, []);
+	return (
+		<>
+			<ParticlesContainer />
+			<section className="section container">
+				<h2 className="sectionTitle">
+					My
+					<span> Portfolio</span>
+				</h2>
+
+				{loading ? (
+					<div className="loader">
+						<RingLoader color="#0d47a1" size={100} />
+					</div>
+				) : (
+					<div className="portfolioContainer grid">
+						{portfolio.map(
+							({
+								id,
+								img,
+								title,
+								clientGithub,
+								serverGithub,
+								demo,
+							}) => {
+								return (
+									<article key={id} className="portfolioItem">
+										<div className="card">
+											<div className="portfolioItem-img">
+												<img
+													className="portfolioItem-img"
+													src={img}
+													alt="portfolio1"
+												/>
+											</div>
 										</div>
-									</a>
-									<a
-										style={{ fontSize: "20px" }}
-										href={demo}
-										target="_blank"
-									>
-										<div
-											style={{
-												fontSize: "16px",
-												fontWeight: "700",
-												marginRight: "10px",
-											}}
-										>
-											<span
-												style={{
-													fontSize: "16px",
-													fontWeight: "700",
-													marginRight: "10px",
-												}}
+										<h3>{title}</h3>
+										<div className="links">
+											<a
+												style={{ fontSize: "20px" }}
+												href={clientGithub}
+												target="_blank"
 											>
-												Live Demo
-											</span>
-											<TbUnlink className="demo-icon" />
+												<div
+													style={{
+														display: "flex",
+														alignItems: "center",
+													}}
+												>
+													<span
+														style={{
+															fontSize: "16px",
+															fontWeight: "500",
+															marginRight: "10px",
+														}}
+													>
+														Client
+													</span>
+													<TbBrandGithubFilled />
+												</div>
+											</a>
+
+											<a
+												style={{ fontSize: "20px" }}
+												href={clientGithub}
+												target="_blank"
+											>
+												<div
+													style={{
+														display: "flex",
+														alignItems: "center",
+													}}
+												>
+													<span
+														style={{
+															fontSize: "16px",
+															fontWeight: "500",
+															marginRight: "10px",
+														}}
+													>
+														server
+													</span>
+													<TbBrandGithubFilled />
+												</div>
+											</a>
+											<a
+												style={{ fontSize: "20px" }}
+												href={demo}
+												target="_blank"
+											>
+												<div
+													style={{
+														fontSize: "16px",
+														fontWeight: "500",
+														marginRight: "10px",
+													}}
+												>
+													<span
+														style={{
+															fontSize: "16px",
+															fontWeight: "500",
+															marginRight: "10px",
+														}}
+													>
+														Live Demo
+													</span>
+													<TbUnlink className="demo-icon" />
+												</div>
+											</a>
 										</div>
-									</a>
-								</div>
-							</article>
-						);
-					}
+									</article>
+								);
+							}
+						)}
+					</div>
 				)}
-			</div>
-		</section>
+			</section>
+		</>
 	);
 };
 

@@ -9,7 +9,6 @@ import {
 } from "react-icons/fa";
 import { FiFileText, FiUser, FiExternalLink } from "react-icons/fi";
 
-
 import Theme1 from "./assets/purple.png";
 import Theme2 from "./assets/red.png";
 import Theme3 from "./assets/blueviolet.png";
@@ -54,60 +53,54 @@ export const links = [
 export const personalInfo = [
 	{
 		id: 1,
-		title: "First Name : ",
-		description: "Israt",
+		title: "Name : ",
+		description: "Israt Jahan",
 	},
 
 	{
 		id: 2,
-		title: "Last Name : ",
-		description: "Moonmoon",
-	},
-
-	{
-		id: 3,
 		title: "Age : ",
 		description: "28 Years",
 	},
 
 	{
-		id: 4,
+		id: 3,
 		title: "Nationality : ",
 		description: "Bangladeshi",
 	},
 
 	{
-		id: 5,
+		id: 4,
 		title: "Freelance : ",
 		description: "Available",
 	},
 
 	{
-		id: 6,
+		id: 5,
 		title: "Address : ",
 		description: "Nasirabad H/S, Bangladesh",
 	},
 
 	{
-		id: 7,
+		id: 6,
 		title: "Phone : ",
 		description: "+8801733577248",
 	},
 
 	{
-		id: 8,
+		id: 7,
 		title: "Email : ",
 		description: "mnmnisrat@gmail.com",
 	},
 
 	{
-		id: 9,
+		id: 8,
 		title: "LinkedIn : ",
 		description: "Israt Jahan",
 	},
 
 	{
-		id: 10,
+		id: 9,
 		title: "Langages : ",
 		description: "French, English, Bangla.",
 	},
@@ -143,38 +136,37 @@ export const resume = [
 	{
 		id: 1,
 		category: "experience",
-		icon: <FaBriefcase style={{ fontSize: "22px" }} />,
-		year: "2018 - PRESENT",
-		title: "Web Developer <p> Envato </p>",
-		desc: "Lorem ipsum dolor sit amet, consectetur tempor incididunt ut labore adipisicing elit,",
+		icon: <FaBriefcase style={{ fontSize: "18px", color: "white" }} />,
+		year: "2022 - 2023",
+		title: "WebHunt BD",
+		desc: "As a WordPress developer in an IT firm, I create and maintain WordPress websites, customize themes and plugins, handle website configuration, ensure security, troubleshoot issues, and collaborate with teams. Your expertise in WordPress development is essential for delivering functional websites.",
 	},
 
 	{
 		id: 2,
 		category: "experience",
-		icon: <FaBriefcase style={{ fontSize: "22px" }} />,
-		year: "2013 - 2018",
-		title: "UI/UX Designer <p> Themeforest </p>",
-		desc: "Lorem incididunt dolor sit amet, consectetur eiusmod dunt doldunt dol elit, tempor incididunt",
+		icon: <FaGraduationCap style={{ fontSize: "20px", color: "white" }} />,
+		year: "2021 - 2022",
+		title: "Creative IT Institute",
+		desc: "Backend technology with Laravel, PHP, and MySQL forms a powerful stack for developing robust and scalable web applications",
 	},
 
 	{
 		id: 4,
 		category: "education",
-		icon: <FaGraduationCap style={{ fontSize: "22px" }} />,
-		year: "2015",
+		icon: <FaGraduationCap style={{ fontSize: "20px", color: "white" }} />,
+		year: "2023",
 		title: "Complete Web Developement <br> Programming Hero</br>",
-		desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do tempor incididunt ut labore",
+		desc: "Build full-stack web applications using MongoDB, Express.js, React, and Node.js. It includes video tutorials, coding exercises, and projects for hands-on learning. Completion of the course equips learners with skills to create robust applications using the MERN stack.",
 	},
-
 
 	{
 		id: 5,
 		category: "education",
-		icon: <FaGraduationCap style={{ fontSize: "22px" }} />,
+		icon: <FaGraduationCap style={{ fontSize: "20px", color: "white" }} />,
 		year: "2017",
 		title: "B.Sc in Architecture <br> Ahsanullah University Of Science & Techonology </br>",
-		desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor ut labore",
+		desc: "A Bachelor's degree in Architecture provides a comprehensive education in the field, covering design principles, construction technology, and history.",
 	},
 ];
 
@@ -228,171 +220,7 @@ export const skills = [
 	},
 ];
 
-/* export const portfolio = [
-	{
-		id: 1,
-		img: Work1,
-		title: "Photo Editing",
-		details: [
-			{
-				icon: <FiFileText />,
-				title: "Project : ",
-				desc: "Photo",
-			},
-			{
-				icon: <FiUser />,
-				title: "Client : ",
-				desc: "Dribble",
-			},
-			{
-				icon: <FaCode />,
-				title: "Language : ",
-				desc: "Adobe Photoshop",
-			},
-			{
-				icon: <FiExternalLink />,
-				title: "Preview : ",
-				desc: "www.dribble.com",
-			},
-		],
-	},
 
-	{
-		id: 2,
-		img: Work2,
-		title: "Website Design",
-		details: [
-			{
-				icon: <FiFileText />,
-				title: "Project : ",
-				desc: "Website",
-			},
-			{
-				icon: <FiUser />,
-				title: "Client : ",
-				desc: "Dribble",
-			},
-			{
-				icon: <FaCode />,
-				title: "Language : ",
-				desc: "React JS",
-			},
-			{
-				icon: <FiExternalLink />,
-				title: "Preview : ",
-				desc: "www.dribble.com",
-			},
-		],
-	},
-
-	{
-		id: 3,
-		img: Work3,
-		title: "Video Editing",
-		details: [
-			{
-				icon: <FiFileText />,
-				title: "Project : ",
-				desc: "Video",
-			},
-			{
-				icon: <FiUser />,
-				title: "Client : ",
-				desc: "Dribble",
-			},
-			{
-				icon: <FaCode />,
-				title: "Language : ",
-				desc: "Adobe Premium",
-			},
-			{
-				icon: <FiExternalLink />,
-				title: "Preview : ",
-				desc: "www.dribble.com",
-			},
-		],
-	},
-
-	{
-		id: 4,
-		img: Work4,
-		title: "Video Editing",
-		details: [
-			{
-				icon: <FiFileText />,
-				title: "Project : ",
-				desc: "Video",
-			},
-			{
-				icon: <FiUser />,
-				title: "Client : ",
-				desc: "Dribble",
-			},
-			{
-				icon: <FaCode />,
-				title: "Language : ",
-				desc: "Adobe Premium",
-			},
-			{
-				icon: <FiExternalLink />,
-				title: "Preview : ",
-				desc: "www.dribble.com",
-			},
-		],
-	},
-
-	{
-		id: 5,
-		img: Work5,
-		title: "Landing Page",
-		details: [
-			{
-				title: "Project : ",
-				desc: "Website",
-			},
-			{
-				title: "Client : ",
-				desc: "Dribble",
-			},
-			{
-				title: "Language : ",
-				desc: "React JS, Node JS",
-			},
-			{
-				title: "Preview : ",
-				desc: "www.dribble.com",
-			},
-		],
-	},
-
-	{
-		id: 6,
-		img: Work6,
-		title: "Photo Editing",
-		details: [
-			{
-				icon: <FiFileText />,
-				title: "Project : ",
-				desc: "Photo",
-			},
-			{
-				icon: <FiUser />,
-				title: "Client : ",
-				desc: "Dribble",
-			},
-			{
-				icon: <FaCode />,
-				title: "Language : ",
-				desc: "Adobe Photoshop",
-			},
-			{
-				icon: <FiExternalLink />,
-				title: "Preview : ",
-				desc: "www.dibble.com",
-			},
-		],
-	},
-]; */
 
 export const themes = [
 	{

@@ -96,3 +96,10 @@
 	font-size: var(--h3-font-size);
 	line-height: 64px;
 }
+
+#tsparticles {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
+}

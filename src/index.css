@@ -1,0 +1,255 @@
+@media screen and (max-width: 1400px) {
+	.container {
+		max-width: calc(100% - 180px);
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	.grid {
+		gap: 20px;
+	}
+
+	.homeData {
+		padding-right: 40px;
+	}
+
+	.homeTitle {
+		font-size: var(--big-font-size);
+	}
+
+	.homeDescription {
+		font-size: var(--small-font-size);
+	}
+
+	.statsTitle {
+		padding-left: 35px;
+	}
+
+	.statsTitle::before {
+		width: 22px;
+	}
+
+	.skillsContainer {
+		row-gap: 32px;
+	}
+
+	.progressCircle {
+		width: 100px;
+		height: 100px;
+	}
+
+	.resumeIcon {
+		width: 36px;
+		height: 36px;
+		line-height: 38px;
+	}
+	.resumeItem {
+		padding-left: 55px;
+	}
+
+	.portfolioContainer {
+		grid-template-columns: repeat(2, 1fr);
+		gap: 12px;
+		margin-inline: auto;
+	}
+
+	.portfolioItem {
+		margin-inline: auto !important;
+	}
+
+	.card {
+		width: 320px;
+		height: 200px;
+		overflow: hidden;
+	}
+
+	.formInput-group {
+		grid-template-columns: repeat(2, 1fr);
+		column-gap: 24px;
+	}
+
+	.formInput-group .formInput-div:last-child {
+		grid-column: 1/-1;
+	}
+
+	.formInput-div {
+		margin-bottom: 24px;
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.container {
+		max-width: 720px;
+	}
+
+	.home {
+		padding: 20px;
+		grid-template-columns: 5fr 7fr;
+	}
+
+	.homeData {
+		padding-right: 0;
+	}
+
+	.section {
+		padding-block: 50px;
+	}
+
+	.sectionTitle {
+		margin-bottom: 40px;
+	}
+
+	.aboutContainer,
+	.resumeContainer,
+	.contactContainer {
+		grid-template-columns: 1fr;
+	}
+
+	.aboutContainer {
+		row-gap: 40px;
+	}
+
+	.subtitleCenter {
+		margin-bottom: 45px;
+	}
+
+	.skillsContainer {
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	.resumeContainer {
+		row-gap: 45px;
+	}
+
+	.resumeItem:not(:last-child) {
+		margin-bottom: 24px;
+	}
+
+	.separator {
+		margin: 65px auto 50px;
+	}
+
+	.portfolioContainer {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.contactContainer {
+		row-gap: 48px;
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.home {
+		grid-template-columns: 1fr;
+	}
+
+	.colorBlock {
+		display: none;
+	}
+
+	.homeImg {
+		width: 270px;
+		height: 270px;
+		border-radius: 50%;
+		margin-top: auto;
+	}
+
+	.homeDescription {
+		max-width: 500px;
+		text-align: center;
+		margin-bottom: auto;
+	}
+
+	.homeTitle {
+		padding-left: 0;
+	}
+
+	.homeTitle span {
+		display: block;
+	}
+
+	.container {
+		max-width: 540px;
+	}
+	.portfolioContainer {
+		grid-template-columns: 1fr;
+	}
+}
+
+@media screen and (max-width: 576px) {
+	.navToggle {
+		top: 20px;
+		right: 25px;
+	}
+
+	.navlink {
+		column-gap: 20px;
+	}
+
+	.navName,
+	.navIcon {
+		font-size: var(--h3-font-size);
+	}
+
+	.skillsContainer {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	.portfolioContainer {
+		grid-template-columns: 1fr;
+	}
+
+	.formInput-group {
+		grid-template-columns: 1fr;
+	}
+
+	.theme-img {
+		width: 25px;
+	}
+
+	.style-switcherToggler,
+	.theme-toggler {
+		width: 40px;
+		height: 40px;
+	}
+	.style-switcherToggler {
+		top: 15%;
+	}
+
+	.theme-toggler {
+		bottom: 15%;
+	}
+
+	.style-switcherClose {
+		top: 5%;
+	}
+}
+
+@media screen and (max-width: 450px) {
+	.homeImg {
+		display: none;
+	}
+	.home {
+		margin-block: auto;
+		align-items: left;
+	}
+
+	.homeTitle {
+		font-size: var(--h1-font-size);
+	}
+
+	.homeDescription {
+		text-align: justify;
+		font-size: var(--normal-font-size);
+		margin-bottom: 20px;
+	}
+
+	.infoTitle {
+		display: block;
+		margin-bottom: 6px;
+	}
+
+	.statsBox {
+		padding: 15px 15px 25px 20px;
+	}
+}

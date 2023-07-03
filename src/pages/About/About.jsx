@@ -7,6 +7,7 @@ import Skills from "../../components/Skills";
 import { resume } from "../../data";
 import ResumeItems from "../../components/ResumeItems";
 import "./About.css";
+import ParticlesContainer from "../../components/ParticlesContainer";
 
 const About = () => {
 	return (
@@ -15,9 +16,9 @@ const About = () => {
 				<h2 className="sectionTitle">
 					About <span>Me</span>
 				</h2>
+				<h2 className="sectionSubTitle"> Personal Info</h2>
 				<div className="aboutContainer grid">
 					<div className="aboutInfo">
-						<h2 className="sectionSubTitle"> Personal Info</h2>
 						<ul className="infoList grid">
 							<Info />
 						</ul>
@@ -53,14 +54,14 @@ const About = () => {
 					<div className="resumeData">
 						{resume.map((val) => {
 							if (val.category === "experience") {
-								return <ResumeItems key={val.id} {...val} />
+								return <ResumeItems key={val.id} {...val} />;
 							}
 						})}
 					</div>
 					<div className="resumeData">
 						{resume.map((val) => {
 							if (val.category === "education") {
-								return <ResumeItems key={val.id} {...val} />
+								return <ResumeItems key={val.id} {...val} />;
 							}
 						})}
 					</div>

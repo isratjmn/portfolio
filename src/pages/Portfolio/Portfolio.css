@@ -1,40 +1,9 @@
 .portfolioContainer {
 	grid-template-columns: repeat(3, 1fr);
+	margin-inline: auto !important;
 	gap: 15px;
 }
 
-.btn {
-	display: inline-block;
-	padding: 14px 24px;
-	margin-bottom: 10px;
-	font-size: var(--tiny-font-size);
-	text-align: center;
-	text-decoration: none;
-	border: none;
-	border-radius: 5px;
-	background-color: var(--first-color);
-	color: #ffffff;
-	cursor: pointer;
-	margin-right: 10px;
-}
-
-.btn:hover {
-	background-color: var(--second-color);
-	border: 2px solid var(--first-color);
-	color: var(--text-black);
-}
-
-.btn-primary {
-	display: inline-block;
-	padding: 12px 24px;
-	text-align: center;
-	text-decoration: none;
-	border: 2px solid var(--first-color);
-	border-radius: 5px;
-	background-color: transparent;
-	color: #000000;
-	cursor: pointer;
-}
 
 .btn-primary:hover {
 	background-color: var(--first-color);
@@ -45,22 +14,20 @@
 	background-color: transparent;
 	padding: 10px;
 	border-radius: 10px;
-	border: 3px solid var(--first-color);
+	border: 2px solid var(--first-color);
 	transition: all 0.3s ease-in-out;
-	
+	margin: 0 auto !important;
 }
 
 .portfolioItem:hover {
 	border: 3px solid var(--text-black);
 	background: transparent;
-	box-shadow: 2px 2px var(--first-color);
-
+	box-shadow: 1px 2px var(--first-color);
 }
 
 .portfolioItem h3 {
 	margin: 24px 0 20px;
 	font-weight: var(--weight-400);
-	color: var(--text-black);
 	text-align: center;
 }
 .links {
@@ -88,19 +55,3 @@
 	object-position: bottom center;
 }
 
-/**==================== Media Query() ====================**/
-@media screen and (max-width: 1024px) {
-	.portfolioContainer {
-		grid-template-columns: repeat(2, 1fr);
-		gap: 40px;
-	}
-}
-
-/**==================== Media Query() ====================**/
-
-@media screen and (max-width: 600px) {
-	.portfolioContainer {
-		grid-template-columns: 1fr;
-		gap: 16px;
-	}
-}
