@@ -31,9 +31,10 @@
 }
 .links {
 	display: flex;
-	gap: 30px;
+	gap: 24px;
 	justify-content: center;
-	margin-bottom: 18px;
+	align-items: center;
+	margin-bottom: 20px;
 }
 
 .card {

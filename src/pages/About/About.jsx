@@ -5,8 +5,8 @@ import Statss from "../../components/Statss";
 import Skills from "../../components/Skills";
 import { resume } from "../../data";
 import ResumeItems from "../../components/ResumeItems";
-import "./About.css";
 import ParticlesContainer from "../../components/ParticlesContainer";
+import "./About.css";
 
 const About = () => {
 	return (

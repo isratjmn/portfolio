@@ -7,7 +7,7 @@ import PortfolioImg4 from "../../assets/WorkHive.png";
 import PortfolioImg5 from "../../assets/legalsolution.png";
 import PortfolioImg6 from "../../assets/book-store.webp";
 import { TbBrandGithubFilled } from "react-icons/tb";
-import { TbUnlink } from "react-icons/tb";
+import { FaLink } from "react-icons/fa";
 import ParticlesContainer from "../../components/ParticlesContainer";
 import { RingLoader } from "react-spinners";
 
@@ -115,16 +115,22 @@ const Portfolio = () => {
 														alignItems: "center",
 													}}
 												>
+													<TbBrandGithubFilled
+														style={{
+															alignItems:
+																"center",
+															marginRight: "3px",
+														}}
+														className="demo-icon"
+													/>
 													<span
 														style={{
 															fontSize: "16px",
-															fontWeight: "500",
-															marginRight: "8px",
+															fontWeight: "700",
 														}}
 													>
 														Client
 													</span>
-													<TbBrandGithubFilled />
 												</div>
 											</a>
 
@@ -139,16 +145,22 @@ const Portfolio = () => {
 														alignItems: "center",
 													}}
 												>
+													<TbBrandGithubFilled
+														style={{
+															alignItems:
+																"center",
+															marginRight: "3px",
+														}}
+														className="demo-icon"
+													/>
 													<span
 														style={{
 															fontSize: "16px",
-															fontWeight: "500",
-															marginRight: "8px",
+															fontWeight: "700",
 														}}
 													>
 														server
 													</span>
-													<TbBrandGithubFilled />
 												</div>
 											</a>
 											<a
@@ -156,22 +168,24 @@ const Portfolio = () => {
 												href={demo}
 												target="_blank"
 											>
-												<div
-													style={{
-														fontSize: "16px",
-														fontWeight: "500",
-														marginRight: "8px",
-													}}
-												>
+												<div>
+													<FaLink
+														style={{
+															alignItems:
+																"center",
+															marginRight: "3px",
+															fontSize: "15px",
+														}}
+														className="demo-icon"
+													/>
 													<span
 														style={{
-															fontSize: "16px",
-															fontWeight: "500",
+															fontSize: "15px",
+															fontWeight: "700",
 														}}
 													>
 														Live Demo
 													</span>
-													<TbUnlink className="demo-icon" />
 												</div>
 											</a>
 										</div>

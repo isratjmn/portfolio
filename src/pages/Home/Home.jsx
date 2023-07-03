@@ -1,11 +1,10 @@
 import React from "react";
 import Profile from "../../assets/home1.jpg";
-import { FaArrowRight } from "react-icons/fa";
-import { Link } from "react-router-dom";
-import "./Home.css";
 import ParticlesContainer from "../../components/ParticlesContainer";
 import Resume from "../../assets/Resume.pdf";
 import { FaDownload } from "react-icons/fa";
+import { TypeAnimation } from "react-type-animation";
+import "./Home.css";
 
 const Home = () => {
 	return (
@@ -17,14 +16,25 @@ const Home = () => {
 					<div className="homeData">
 						<h1 className="homeTitle">
 							<span>I'm Israt Moonmoon</span> <br />
-							<span
+							<TypeAnimation
+								sequence={[
+									"Mern-Stack Developer",
+									1000,
+									"Front-End Developer",
+									1000,
+									"React Developer",
+									1000,
+									"Wordpress Developer",
+									1000,
+								]}
+								speed={50}
 								style={{
 									fontSize: "32px",
 									color: "hsl(0, 0%, 50%)",
 								}}
-							>
-								Mern-Stack Developer
-							</span>
+								repeat={Infinity}
+							/>
+							
 						</h1>
 
 						<p className="homeDescription">
@@ -44,12 +54,6 @@ const Home = () => {
 								<FaDownload />
 							</span>
 						</a>
-						<Link to="/about" className="button">
-							More About Me
-							<span className="buttonIcon">
-								<FaArrowRight />
-							</span>
-						</Link>
 					</div>
 				</div>
 				<div className="colorBlock"></div>

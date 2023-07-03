@@ -125,6 +125,10 @@
 		margin-bottom: 24px;
 	}
 
+	.homeImg {
+		width: 800px;
+	}
+
 	.separator {
 		margin: 65px auto 50px;
 	}
