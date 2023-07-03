@@ -14,17 +14,26 @@ const Home = () => {
 				<div className="homeContent">
 					<div className="homeData">
 						<h1 className="homeTitle">
-							<span>I'm Israt Moonmoon.</span> <br />
-							Mern-Stack Developer.
+							<span>I'm Israt Moonmoon</span> <br />
+							<span
+								style={{
+									fontSize: "26px",
+									color: "hsl(0, 0%, 50%)",
+								}}
+							>
+								Mern-Stack Developer
+							</span>
 						</h1>
 						<p className="homeDescription">
-							Ante malesuada netus ut auctor viverra nostra fusce
-							arcu, molestie volutpat vitae hendrerit nam duis
-							maecenas odio, aptent magnis sociosqu primis
-							eleifend magna curabitur. Erat nascetur gravida per
-							consequat nulla parturient sollicitudin, nunc
-							blandit accumsan conubia suspendisse mattis nullam
-							mus, risus facilisi mi lectus sapien commodo.
+							As a Self-taught programmer, I have developed
+							proficiency in the MERN stack and possess a solid
+							understanding of JavaScript. I am deeply committed
+							to continuous learning and staying updated with the
+							latest industry trends. I have honed my skills in
+							creating responsive user interfaces and building
+							robust RESTful APIs. With this expertise, I am able
+							to deliver seamless user experiences and effectively
+							interact with backend services.
 						</p>
 						<Link to="/about" className="button">
 							More About Me

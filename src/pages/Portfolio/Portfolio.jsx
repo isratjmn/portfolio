@@ -167,7 +167,6 @@ const Portfolio = () => {
 														style={{
 															fontSize: "16px",
 															fontWeight: "500",
-															marginRight: "8px",
 														}}
 													>
 														Live Demo
