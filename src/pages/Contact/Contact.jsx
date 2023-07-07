@@ -41,7 +41,6 @@ const Contact = () => {
 				Get In<span> Touch</span>
 			</h2>
 			<div className="contactContainer container grid">
-				
 				<div className="contactData">
 					<h2 className="contactTitle">Don't be Shy!!</h2>
 					<p className="contactDesc">
@@ -62,7 +61,16 @@ const Contact = () => {
 							<div>
 								<h1 className="infoTitle">Email Me: </h1>
 								<h4 className="infoDesc">
-									mnmnisrat@gmail.com
+									<a
+										href="mailto:jamilakterup@gmail.com"
+										style={{
+											color: "hsl(252, 35%, 51%)",
+											fontWeight: "700",
+										}}
+										target="blank"
+									>
+										mnmnisrat@gmail.com
+									</a>
 								</h4>
 							</div>
 						</div>
@@ -70,7 +78,18 @@ const Contact = () => {
 							<BsPhoneVibrate className="infoIcon" />
 							<div>
 								<h1 className="infoTitle">Call Me: </h1>
-								<h4 className="infoDesc">+8801733577248</h4>
+								<h4 className="infoDesc">
+									<a
+										href="tel:+8801790-398719"
+										style={{
+											color: "hsl(252, 35%, 51%)",
+											fontWeight: "700",
+										}}
+										target="blank"
+									>
+										+8801733577248
+									</a>
+								</h4>
 							</div>
 						</div>
 					</div>
@@ -83,7 +102,7 @@ const Contact = () => {
 							<FaFacebookF />
 						</a>
 						<a
-							href="https://www.facebook.com/moonmoon.israt/"
+							href="https://twitter.com/mnisrat_j"
 							className="contactSocial-links"
 						>
 							<FaTwitter />

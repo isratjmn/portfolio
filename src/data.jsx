@@ -5,7 +5,6 @@ import {
 	FaEnvelopeOpen,
 	FaBriefcase,
 	FaGraduationCap,
-	FaCode,
 } from "react-icons/fa";
 import { FiFileText, FiUser, FiExternalLink } from "react-icons/fi";
 
@@ -84,19 +83,43 @@ export const personalInfo = [
 	{
 		id: 6,
 		title: "Phone : ",
-		description: "+8801733577248",
+		description: (
+			<a
+				href="tel:+8801733577248"
+				style={{ color: "hsl(252, 35%, 51%)", fontWeight: "700" }}
+				target="blank"
+			>
+				+8801733577248
+			</a>
+		),
 	},
 
 	{
 		id: 7,
 		title: "Email : ",
-		description: "mnmnisrat@gmail.com",
+		description: (
+			<a
+				href="mailto:mnmnisrat@gmail.com"
+				style={{ color: "hsl(252, 35%, 51%)", fontWeight: "700" }}
+				target="blank"
+			>
+				mnmnisrat@gmail.com
+			</a>
+		),
 	},
 
 	{
 		id: 8,
 		title: "LinkedIn : ",
-		description: "Israt Jahan",
+		description: (
+			<a
+				href="https://www.linkedin.com/in/israt-moonmoon-92a06542/"
+				style={{ color: "hsl(252, 35%, 51%)", fontWeight: "700" }}
+				target="blank"
+			>
+				Israt Moonmoon
+			</a>
+		),
 	},
 
 	{
@@ -159,7 +182,7 @@ export const resume = [
 		title: "Complete Web Developement <br> Programming Hero</br>",
 		desc: "Build full-stack web applications using MongoDB, Express.js, React, and Node.js. It includes video tutorials, coding exercises, and projects for hands-on learning. Completion of the course equips learners with skills to create robust applications using the MERN stack.",
 	},
-	
+
 	{
 		id: 5,
 		category: "education",
@@ -219,8 +242,6 @@ export const skills = [
 		percentage: "40",
 	},
 ];
-
-
 
 export const themes = [
 	{

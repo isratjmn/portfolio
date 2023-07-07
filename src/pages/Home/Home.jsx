@@ -4,8 +4,7 @@ import ParticlesContainer from "../../components/ParticlesContainer";
 import Resume from "../../assets/Resume.pdf";
 import { FaDownload } from "react-icons/fa";
 import { TypeAnimation } from "react-type-animation";
-import { Rings } from  'react-loader-spinner' 
-
+import { Rings } from "react-loader-spinner";
 import "./Home.css";
 
 const Home = () => {
@@ -24,11 +23,10 @@ const Home = () => {
 			{loading ? (
 				<div className="spinnerContainer">
 					<Rings
-						
 						color="#6a0dad"
 						height={180}
 						width={180}
-						ariaLabel='loading'
+						ariaLabel="loading"
 					/>
 				</div>
 			) : (
