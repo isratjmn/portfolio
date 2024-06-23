@@ -16,24 +16,25 @@ const About = () => {
 					About <span>Me</span>
 				</h2>
 				<h2 className="sectionSubTitle"> Personal Info</h2>
-				<div className="aboutContainer grid">
+				<div className="aboutContainer flex ">
 					<div className="aboutInfo">
 						<ul className="infoList grid">
 							<Info />
 						</ul>
-
 					</div>
 					<div className="stats grid">
-						<Statss />
+						{/* <Statss /> */}
 					</div>
 				</div>
 			</section>
 
 			<div className="separator"></div>
 
-			<section className="skills">
-				<h3 className="sectionSubTitle subtitleCenter">My Skills</h3>
-				<div className="skillsContainer grid">
+			<section className="skills my-8">
+				<h3 className="sectionSubTitle subtitleCenter text-2xl font-bold mb-4">
+					My Skills
+				</h3>
+				<div className="skillsContainer flex justify-center">
 					<Skills />
 				</div>
 			</section>

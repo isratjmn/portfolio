@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Profile from "../../assets/home1.jpg";
+import Profile1 from "../../assets/IMAGE_1.jpeg";
 import ParticlesContainer from "../../components/ParticlesContainer";
 import Resume from "../../assets/Resume.pdf";
 import { FaDownload } from "react-icons/fa";
@@ -31,7 +32,7 @@ const Home = () => {
 				</div>
 			) : (
 				<section className="home section grid">
-					<img src={Profile} className="homeImg" alt="home" />
+					<img src={Profile1} className="homeImg" alt="home" />
 					<div className="homeContent">
 						<div className="homeData">
 							<h1 className="homeTitle">
@@ -44,7 +45,7 @@ const Home = () => {
 										1000,
 										"React Developer",
 										1000,
-										"Wordpress Developer",
+										"Full-Stack Developer",
 										1000,
 									]}
 									speed={50}
@@ -58,7 +59,7 @@ const Home = () => {
 
 							<p className="homeDescription">
 								As a Self-taught programmer, I have developed
-								proficiency in the MERN stack and possess a
+								proficiency in the Full-Stack and possess a
 								solid understanding of JavaScript. I am deeply
 								committed to continuous learning and staying
 								updated with the latest industry trends. I have

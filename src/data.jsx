@@ -18,6 +18,24 @@ import Theme7 from "./assets/yellowgreen.png";
 import Theme8 from "./assets/orange.png";
 import Theme9 from "./assets/green.png";
 import Theme10 from "./assets/yellow.png";
+import htmlImage from "./assets/html-5.png";
+import cssImage from "./assets/css-logo.png";
+import bootstrapImage from "./assets/bootstrap-logo-vector.svg";
+import tailwindImage from "./assets/tailwind-css.png";
+import materialUiImage from "./assets/material-ui.png";
+import javascriptImage from "./assets/javaScript.webp";
+import reactImage from "./assets/React.webp";
+import nextjsImage from "./assets/nextjs.png";
+import typescrptImage from "./assets/typescript.webp";
+import phpImage from "./assets/php.png";
+import laravelImage from "./assets/laravel.wine.png";
+import nodeImage from "./assets/nodejs.png";
+import expressImage from "./assets/express.webp";
+import mongooseImage from "./assets/mongoose.png";
+import postGresSQLImage from "./assets/PostgreSQL.png";
+import graphQLImage from "./assets/graphQL.png";
+import mongodb from "./assets/mongoose.png";
+import prismaImage from "./assets/prisma.png";
 
 export const links = [
 	{
@@ -55,13 +73,6 @@ export const personalInfo = [
 		title: "Name : ",
 		description: "Israt Jahan",
 	},
-
-	{
-		id: 2,
-		title: "Age : ",
-		description: "28 Years",
-	},
-
 	{
 		id: 3,
 		title: "Nationality : ",
@@ -69,19 +80,7 @@ export const personalInfo = [
 	},
 
 	{
-		id: 4,
-		title: "Freelance : ",
-		description: "Available",
-	},
-
-	{
 		id: 5,
-		title: "Address : ",
-		description: "Nasirabad H/S, Bangladesh",
-	},
-
-	{
-		id: 6,
 		title: "Phone : ",
 		description: (
 			<a
@@ -93,7 +92,6 @@ export const personalInfo = [
 			</a>
 		),
 	},
-
 	{
 		id: 7,
 		title: "Email : ",
@@ -107,25 +105,23 @@ export const personalInfo = [
 			</a>
 		),
 	},
-
 	{
 		id: 8,
 		title: "LinkedIn : ",
 		description: (
 			<a
-				href="https://www.linkedin.com/in/israt-moonmoon-92a06542/"
+				href="https://www.linkedin.com/in/israt-jahan-92a06542/"
 				style={{ color: "hsl(252, 35%, 51%)", fontWeight: "700" }}
 				target="blank"
 			>
-				Israt Moonmoon
+				Israt Jahan
 			</a>
 		),
 	},
-
 	{
-		id: 9,
-		title: "Langages : ",
-		description: "French, English, Bangla.",
+		id: 4,
+		title: "Address : ",
+		description: "Nasirabad H/S, Chattogram, Bangladesh",
 	},
 ];
 
@@ -160,13 +156,21 @@ export const resume = [
 		id: 1,
 		category: "experience",
 		icon: <FaBriefcase style={{ fontSize: "18px", color: "white" }} />,
-		year: "2022 - 2023",
+		year: "Feb-2023 - Aug-2023",
+		title: "X-Codex",
+		desc: "As a Front-end React Developer, my role involves creating user-friendly web interfaces using React.js. I integrate these interfaces with back-end services, manage application state, and ensure responsive design. Collaborating with designers and other developers, you'll optimize performance, conduct testing, and follow best practices to deliver high-quality web applications. Staying updated on industry trends and problem-solving are key aspects of my role.",
+	},
+	{
+		id: 2,
+		category: "experience",
+		icon: <FaBriefcase style={{ fontSize: "18px", color: "white" }} />,
+		year: "2021 - 2022",
 		title: "WebHunt BD",
 		desc: "As a WordPress developer in an IT firm, I create and maintain WordPress websites, customize themes and plugins, handle website configuration, ensure security, troubleshoot issues, and collaborate with teams. Your expertise in WordPress development is essential for delivering functional websites.",
 	},
 
 	{
-		id: 2,
+		id: 3,
 		category: "experience",
 		icon: <FaGraduationCap style={{ fontSize: "20px", color: "white" }} />,
 		year: "2021 - 2022",
@@ -178,7 +182,7 @@ export const resume = [
 		id: 4,
 		category: "education",
 		icon: <FaGraduationCap style={{ fontSize: "20px", color: "white" }} />,
-		year: "2023",
+		year: "2022",
 		title: "Complete Web Developement <br> Programming Hero</br>",
 		desc: "Build full-stack web applications using MongoDB, Express.js, React, and Node.js. It includes video tutorials, coding exercises, and projects for hands-on learning. Completion of the course equips learners with skills to create robust applications using the MERN stack.",
 	},
@@ -196,50 +200,93 @@ export const resume = [
 export const skills = [
 	{
 		id: 1,
-		title: "CSS",
-		percentage: "25",
+		title: "HTML",
+		image: htmlImage,
 	},
-
-	{
-		id: 5,
-		title: "Bootstrap",
-		percentage: "90",
-	},
-
-	{
-		id: 6,
-		title: "Tailwind",
-		percentage: "80",
-	},
-
 	{
 		id: 2,
-		title: "Javascript",
-		percentage: "70",
+		title: "CSS",
+		image: cssImage,
 	},
-
 	{
 		id: 3,
-		title: "React.js",
-		percentage: "75",
+		title: "Bootstrap",
+		image: bootstrapImage,
 	},
-
 	{
 		id: 4,
-		title: "Next.js",
-		percentage: "15",
+		title: "Tailwind",
+		image: tailwindImage,
 	},
-
+	{
+		id: 5,
+		title: "Material UI",
+		image: materialUiImage,
+	},
+	{
+		id: 6,
+		title: "Javascript",
+		image: javascriptImage,
+	},
 	{
 		id: 7,
-		title: "PHP",
-		percentage: "45",
+		title: "React.js",
+		image: reactImage,
 	},
-
 	{
 		id: 8,
+		title: "Next.js",
+		image: nextjsImage,
+	},
+	{
+		id: 9,
+		title: "PHP",
+		image: phpImage,
+	},
+	{
+		id: 10,
 		title: "Laravel",
-		percentage: "40",
+		image: laravelImage,
+	},
+	{
+		id: 11,
+		title: "NodeJs",
+		image: nodeImage,
+	},
+	{
+		id: 12,
+		title: "ExpressJS",
+		image: expressImage,
+	},
+	{
+		id: 13,
+		title: "Typescript",
+		image: typescrptImage,
+	},
+	{
+		id: 14,
+		title: "Mongoose",
+		image: mongooseImage,
+	},
+	{
+		id: 15,
+		title: "PostgreSQL",
+		image: postGresSQLImage,
+	},
+	{
+		id: 16,
+		title: "GraphQL",
+		image: graphQLImage,
+	},
+	{
+		id: 17,
+		title: "MongoDB",
+		image: mongodb,
+	},
+	{
+		id: 18,
+		title: "Prisma",
+		image: prismaImage,
 	},
 ];
 

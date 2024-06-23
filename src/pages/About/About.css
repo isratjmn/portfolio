@@ -3,7 +3,6 @@
 .resumeContainer {
 	grid-template-columns: repeat(2, 1fr);
 	align-items: flex-start;
-
 }
 .infoList {
 	margin-bottom: 10px;
@@ -73,9 +72,11 @@
 }
 
 .skillsContainer {
-	grid-template-columns: repeat(4, 1fr);
-	justify-items: center;
-	row-gap: 48px;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: center;
+	gap: 1rem;
 }
 
 .progressCircle {

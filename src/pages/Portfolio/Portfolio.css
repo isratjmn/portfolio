@@ -15,6 +15,7 @@
 	border-radius: 10px;
 	border: 2px solid var(--first-color);
 	transition: all 0.3s ease-in-out;
+	min-height: 420px;
 	margin: 0 auto !important;
 }
 
@@ -39,7 +40,7 @@
 
 .card {
 	width: 400px;
-	height: 200px;
+	height: 300px;
 	overflow: hidden;
 }
 
@@ -55,3 +56,27 @@
 	object-position: bottom center;
 }
 
+.technologies {
+	margin-top: 1rem;
+}
+
+.technologies h4 {
+	font-size: 1.1rem;
+	margin-bottom: 0.5rem;
+}
+
+.technologies ul {
+	list-style-type: none;
+	padding-left: 0;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.technologies li {
+	background: #f0f0f0;
+	padding: 4px 8px;
+	margin: 4px;
+	border-radius: 4px;
+	font-size: 16px;
+	display: inline-block;
+}

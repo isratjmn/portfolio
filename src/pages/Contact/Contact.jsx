@@ -15,7 +15,6 @@ const Contact = () => {
 
 	const sendEmail = (e) => {
 		e.preventDefault();
-
 		emailjs
 			.sendForm(
 				"service_og5ab1t",

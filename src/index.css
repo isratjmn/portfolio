@@ -2,6 +2,8 @@
 	.container {
 		max-width: calc(100% - 180px);
 	}
+	
+
 }
 
 @media screen and (max-width: 1200px) {
@@ -28,16 +30,6 @@
 	.statsTitle::before {
 		width: 22px;
 	}
-
-	.skillsContainer {
-		row-gap: 32px;
-	}
-
-	.progressCircle {
-		width: 100px;
-		height: 100px;
-	}
-
 	.resumeIcon {
 		width: 36px;
 		height: 36px;
@@ -58,8 +50,8 @@
 	}
 
 	.card {
-		width: 320px;
-		height: 200px;
+		width: 300px;
+		height: 290px;
 		overflow: hidden;
 	}
 
@@ -112,9 +104,10 @@
 	.subtitleCenter {
 		margin-bottom: 45px;
 	}
+	.card {
+		width: 340px;
 
-	.skillsContainer {
-		grid-template-columns: repeat(3, 1fr);
+
 	}
 
 	.resumeContainer {
@@ -181,7 +174,7 @@
 	}
 
 	.card {
-		width: 340px;
+		width: 300px;
 	}
 }
 
@@ -204,10 +197,6 @@
 	.infoItem {
 		display: flex;
 		padding-left: 10px;
-	}
-
-	.skillsContainer {
-		grid-template-columns: repeat(2, 1fr);
 	}
 
 	.portfolioContainer {
