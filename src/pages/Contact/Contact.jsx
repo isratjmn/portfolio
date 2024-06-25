@@ -42,10 +42,10 @@ const Contact = () => {
 			<div className="contactContainer container grid">
 				<div className="contactData">
 					<h2 className="contactTitle">Don't be Shy!!</h2>
-					<p className="contactDesc">
+					{/* <p className="contactDesc">
 						Lorem ipsum dolor sit, amet consectetur adipisicing
 						elit. Odio, in.
-					</p>
+					</p> */}
 
 					<div className="contactInfo">
 						<div className="infoItem">
