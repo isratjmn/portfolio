@@ -22,9 +22,7 @@ const About = () => {
 							<Info />
 						</ul>
 					</div>
-					<div className="stats grid">
-						{/* <Statss /> */}
-					</div>
+					<div className="stats grid">{/* <Statss /> */}</div>
 				</div>
 			</section>
 

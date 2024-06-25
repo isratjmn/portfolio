@@ -2,8 +2,6 @@
 	.container {
 		max-width: calc(100% - 180px);
 	}
-	
-
 }
 
 @media screen and (max-width: 1200px) {
@@ -106,8 +104,6 @@
 	}
 	.card {
 		width: 340px;
-
-
 	}
 
 	.resumeContainer {
@@ -174,12 +170,11 @@
 	}
 
 	.card {
-		width: 300px;
+		width: 360px;
 	}
 }
 
 @media screen and (max-width: 576px) {
-
 	.navToggle {
 		top: 20px;
 		right: 25px;
@@ -227,15 +222,18 @@
 	.style-switcherClose {
 		top: 5%;
 	}
+
+	.card {
+    width: 400px;
+  }
 }
 
 @media screen and (max-width: 450px) {
-	
 	.home {
 		margin-block: auto;
 		align-items: left;
 	}
-	
+
 	.section {
 		margin-bottom: 100px;
 	}

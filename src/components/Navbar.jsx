@@ -7,7 +7,7 @@ const Navbar = () => {
 	const [showMenu, setShowMenu] = useState(false);
 	return (
 		<nav className="nav">
-			<div className={`${showMenu ? "navMenu show-menu": "navMenu"}`}>
+			<div className={`${showMenu ? "navMenu show-menu" : "navMenu"}`}>
 				<ul className="navList">
 					{links.map(({ name, icon, path }, index) => {
 						return (
@@ -18,7 +18,8 @@ const Navbar = () => {
 										isActive
 											? "navLink active-nav"
 											: "navLink"
-									} onClick={() => setShowMenu(!showMenu)}
+									}
+									onClick={() => setShowMenu(!showMenu)}
 								>
 									{icon}
 									<h3 className="navName">{name}</h3>
@@ -29,7 +30,12 @@ const Navbar = () => {
 				</ul>
 			</div>
 
-			<div className={`${showMenu ? "navToggle animate-toggle": "navToggle"}`} onClick={() => setShowMenu(!showMenu)}>
+			<div
+				className={`${
+					showMenu ? "navToggle animate-toggle" : "navToggle"
+				}`}
+				onClick={() => setShowMenu(!showMenu)}
+			>
 				<span></span>
 				<span></span>
 				<span></span>

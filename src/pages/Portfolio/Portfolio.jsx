@@ -168,9 +168,9 @@ const Portfolio = () => {
 									className="portfolioItem mx-auto"
 								>
 									<div className="card mx-auto">
-										<div className="portfolioItem-img">
+										<div className="portfolioItem-img  mx-auto">
 											<img
-												className="portfolioItem-img"
+												className="portfolioItem-img  mx-auto"
 												src={img}
 												alt="portfolio1"
 											/>
