@@ -20,7 +20,7 @@ const portfolio = [
 		title: "Full-Stack Travel Buddy Matching App | Harmonize Your Travels and Soul",
 		clientGithub: "https://github.com/isratjmn/traxtrekbuddy-client",
 		serverGithub: "https://github.com/isratjmn/traxtrekbuddy-server",
-		demo: "https://traxtrek-client.vercel.app/",
+		live_link: "https://traxtrek-client.vercel.app/",
 		technologies: [
 			"Next.JS",
 			"Redux",
@@ -38,7 +38,7 @@ const portfolio = [
 		title: "Full-Stack SpectraSync Eye Glasses | Secure and Efficient Eye Class Inventory",
 		clientGithub: "https://github.com/isratjmn/spectrasync-client",
 		serverGithub: "https://github.com/isratjmn/spectrasync-server",
-		demo: "https://spectrasync-glasses.netlify.app/",
+		live_link: "https://spectrasync-glasses.netlify.app/",
 		technologies: [
 			"React.js",
 			"Redux",
@@ -61,7 +61,7 @@ const portfolio = [
 		img: PortfolioImg8,
 		title: "AidNAsist Full-Stack donation App | Connecting Generosity with Need",
 		clientGithub: "https://github.com/isratjmn/aid-n-assist",
-		demo: "https://aid-n-assist-zeta.vercel.app",
+		live_link: "https://aid-n-assist-zeta.vercel.app",
 		technologies: [
 			"React.js",
 			"Node.js",
@@ -76,7 +76,7 @@ const portfolio = [
 		title: "Mern-Stack Summer Yoga Camp App | Nurture Mind, Body, and Spirit",
 		clientGithub: "https://github.com/isratjmn/jazz-yoga-camp-client",
 		serverGithub: "https://github.com/isratjmn/jazz-yoga-camp-server",
-		demo: "https://zen-vibe-camp.web.app/",
+		live_link: "https://zen-vibe-camp.web.app/",
 		technologies: [
 			"Tailwind",
 			"React.js",
@@ -94,7 +94,7 @@ const portfolio = [
 		title: "Mern-Stack ToyQuest | The Ultimate Destination for Toys and Playtime",
 		clientGithub: "https://github.com/isratjmn/toy-quest-client",
 		serverGithub: "https://github.com/isratjmn/toy-quest-server",
-		demo: "https://toy-quest.web.app/",
+		live_link: "https://toy-quest.web.app/",
 		technologies: [
 			"Tailwind",
 			"Firebase",
@@ -110,7 +110,7 @@ const portfolio = [
 		title: "FlavorFusion | Culinary Delights and Exquisite Dining",
 		clientGithub: "https://github.com/isratjmn/flavor-fusion",
 		serverGithub: "https://github.com/isratjmn/flavor-fusion-server",
-		demo: "https://flavor-fusion-3b6cc.web.app/",
+		live_link: "https://flavor-fusion-3b6cc.web.app/",
 		technologies: [
 			"Tailwind",
 			"React.js",
@@ -125,7 +125,7 @@ const portfolio = [
 		img: PortfolioImg4,
 		title: "WorkHive | Empowering Productivity and Connectivity",
 		clientGithub: "https://github.com/isratjmn/peak-career",
-		demo: "https://jocular-douhua.netlify.app/",
+		live_link: "https://jocular-douhua.netlify.app/",
 		technologies: ["HTML", "CSS", "JavaScript", "React.js"],
 	},
 ];
@@ -160,7 +160,7 @@ const Portfolio = () => {
 								title,
 								clientGithub,
 								serverGithub,
-								demo,
+								live_link,
 								technologies,
 							}) => (
 								<article
@@ -176,7 +176,9 @@ const Portfolio = () => {
 											/>
 										</div>
 									</div>
-									<h3>{title}</h3>
+									<h3 className="flex items-start justify-start">
+										{title}
+									</h3>
 									<div className="links">
 										<a
 											style={{ fontSize: "20px" }}
@@ -245,11 +247,11 @@ const Portfolio = () => {
 
 										<a
 											style={{ fontSize: "20px" }}
-											href={demo}
+											href={live_link}
 											target="_blank"
 											rel="noopener noreferrer"
 										>
-											<div>
+											<div className="flex items-center justify-center gap-1">
 												<FaLink
 													style={{
 														alignItems: "center",
@@ -264,7 +266,7 @@ const Portfolio = () => {
 														fontWeight: "700",
 													}}
 												>
-													Live Demo
+													Live Link
 												</span>
 											</div>
 										</a>

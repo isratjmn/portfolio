@@ -6,7 +6,7 @@ import {
 	FaBriefcase,
 	FaGraduationCap,
 } from "react-icons/fa";
-import { FiFileText, FiUser, FiExternalLink } from "react-icons/fi";
+import { MdDashboardCustomize } from "react-icons/md";
 
 import Theme1 from "./assets/purple.png";
 import Theme2 from "./assets/red.png";
@@ -36,11 +36,12 @@ import postGresSQLImage from "./assets/PostgreSQL.png";
 import graphQLImage from "./assets/graphQL.png";
 import mongodb from "./assets/mongoose.png";
 import prismaImage from "./assets/prisma.png";
+import { GrLogin } from "react-icons/gr";
 
 export const links = [
 	{
-		id: 1,
 		name: "Home",
+		id: 1,
 		icon: <FaHome className="navIcon" />,
 		path: "/",
 	},
@@ -65,6 +66,25 @@ export const links = [
 		icon: <FaEnvelopeOpen className="navIcon" />,
 		path: "/contact",
 	},
+
+	{
+		id: 5,
+		name: "Dashboard",
+		icon: <MdDashboardCustomize className="navIcon" />,
+		path: "/dashboard",
+	},
+	{
+		id: 6,
+		name: "Login",
+		icon: <GrLogin className="navIcon" />,
+		path: "/login",
+	},
+	/* {
+    id: 6,
+    name: isLoggedIn ? "Logout" : "Login",
+    icon: isLoggedIn ? <FaBriefcase className="navIcon" /> : <FaBriefcase className="navIcon" />,
+    path: isLoggedIn ? "/logout" : "/login",
+  }, */
 ];
 
 export const personalInfo = [

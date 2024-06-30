@@ -98,25 +98,25 @@ const Contact = () => {
 							href="https://www.facebook.com/moonmoon.israt/"
 							className="contactSocial-links"
 						>
-							<FaFacebookF />
+							<FaFacebookF className="text-4xl p-2" />
 						</a>
 						<a
 							href="https://twitter.com/mnisrat_j"
 							className="contactSocial-links"
 						>
-							<FaTwitter />
+							<FaTwitter className="text-4xl p-2" />
 						</a>
 						<a
 							href="https://dribbble.com/moon_01"
 							className="contactSocial-links"
 						>
-							<FaDribbble />
+							<FaDribbble className="text-4xl p-2" />
 						</a>
 						<a
 							href="https://www.linkedin.com/in/israt-moonmoon-92a06542/"
 							className="contactSocial-links"
 						>
-							<FaLinkedin />
+							<FaLinkedin className="text-4xl p-2" />
 						</a>
 					</div>
 				</div>

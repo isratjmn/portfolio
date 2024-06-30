@@ -1,0 +1,8 @@
+.colorBlockLogin {
+	position: fixed;
+	height: 100%;
+	width: 40%;
+	background-color: var(--first-color);
+	top: 0;
+	left: 0;
+}

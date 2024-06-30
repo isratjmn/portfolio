@@ -29,9 +29,11 @@
 		width: 22px;
 	}
 	.resumeIcon {
-		width: 36px;
-		height: 36px;
+		width: 40px;
+		height: 40px;
 		line-height: 38px;
+		text-align: center;
+		padding: 10px;
 	}
 	.resumeItem {
 		padding-left: 55px;
@@ -208,8 +210,8 @@
 
 	.style-switcherToggler,
 	.theme-toggler {
-		width: 40px;
-		height: 40px;
+		width: 30px;
+		height: 30px;
 	}
 	.style-switcherToggler {
 		top: 15%;

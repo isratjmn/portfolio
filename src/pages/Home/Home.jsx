@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import Profile from "../../assets/home1.jpg";
 import Profile1 from "../../assets/IMAGE_1.jpeg";
 import ParticlesContainer from "../../components/ParticlesContainer";
-import Resume from "../../assets/Resume.pdf";
+// import Resume from "../../assets/Resume.pdf";
+import ResumeIsrat from "../../assets/resume_israt.pdf";
 import { FaDownload } from "react-icons/fa";
 import { TypeAnimation } from "react-type-animation";
 import { Rings } from "react-loader-spinner";
@@ -69,7 +69,7 @@ const Home = () => {
 								seamless user experiences and effectively
 								interact with backend services.
 							</p>
-							<a href={Resume} download className="button">
+							<a href={ResumeIsrat} download className="button">
 								Download Resume
 								<span className="buttonIcon">
 									<FaDownload />

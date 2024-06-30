@@ -48,10 +48,11 @@
 .contactSocial-links {
 	background-color: var(--container-color) !important;
 	color: var(--first-color);
-	width: 45px;
-	height: 45px;
+	width: 44px;
+	height: 44px;
 	border-radius: 50%;
 	text-align: center;
+	padding: 2px;
 	line-height: 44px;
 	transition: all 0.3s ease;
 	border: 2px solid var(--first-color);
