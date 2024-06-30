@@ -99,6 +99,8 @@ export const personalInfo = [
 		description: "Bangladeshi",
 	},
 
+
+
 	{
 		id: 5,
 		title: "Phone : ",

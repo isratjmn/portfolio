@@ -1,11 +1,7 @@
-import React from "react";
 import Info from "../../components/Info";
-import { FaDownload } from "react-icons/fa";
-import Statss from "../../components/Statss";
 import Skills from "../../components/Skills";
 import { resume } from "../../data";
 import ResumeItems from "../../components/ResumeItems";
-import ParticlesContainer from "../../components/ParticlesContainer";
 import "./About.css";
 
 const About = () => {
@@ -25,9 +21,7 @@ const About = () => {
 					<div className="stats grid">{/* <Statss /> */}</div>
 				</div>
 			</section>
-
 			<div className="separator"></div>
-
 			<section className="skills my-8">
 				<h3 className="sectionSubTitle subtitleCenter text-2xl font-bold mb-4">
 					My Skills

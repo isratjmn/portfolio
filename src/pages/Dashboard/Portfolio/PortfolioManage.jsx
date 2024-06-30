@@ -65,17 +65,17 @@ const PortfolioManage = () => {
 
 	return (
 		<section className="pt-8">
-			<h2 className="sectionTitleMedium text-center justify-center items-center flex mb-8 text-4xl font-semibold gap-2">
-				Portfolio 
+			<h2 className="sectionTitleMedium text-left justify-start items-start flex mb-8 text-4xl font-semibold gap-2">
+				Portfolio
 				<span> Information</span>
 			</h2>
-			<div className="mx-auto p-4 flex flex-wrap gap-2">
-				<div className="w-full lg:w-[40%]">
-					<form
-						onSubmit={handleSubmit}
-						className="bg-white p-8 rounded-lg shadow-2xl max-w-2xl"
-					>
-						<div className="mb-6">
+			<div className="w-full px-2 lg:w-[40%] mb-6">
+				<form
+					onSubmit={handleSubmit}
+					className="bg-white p-8 rounded-lg shadow-2xl max-w-2xl"
+				>
+					<div className="flex flex-wrap -mx-2 mb-6">
+						<div className="w-full md:w-1/2 px-2 mb-6 md:mb-0">
 							<label
 								htmlFor="title"
 								className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
@@ -92,7 +92,7 @@ const PortfolioManage = () => {
 								required
 							/>
 						</div>
-						<div className="mb-6">
+						<div className="w-full md:w-1/2 px-2">
 							<label
 								htmlFor="clientGithub"
 								className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
@@ -109,7 +109,9 @@ const PortfolioManage = () => {
 								required
 							/>
 						</div>
-						<div className="mb-6">
+					</div>
+					<div className="flex flex-wrap -mx-2 mb-6">
+						<div className="w-full md:w-1/2 px-2 mb-6 md:mb-0">
 							<label
 								htmlFor="serverGithub"
 								className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
@@ -126,7 +128,7 @@ const PortfolioManage = () => {
 								required
 							/>
 						</div>
-						<div className="mb-6">
+						<div className="w-full md:w-1/2 px-2">
 							<label
 								htmlFor="demo"
 								className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
@@ -143,39 +145,35 @@ const PortfolioManage = () => {
 								required
 							/>
 						</div>
-						<div className="mb-6">
-							<label
-								htmlFor="technologies"
-								className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-							>
-								Technologies :
-							</label>
-							<Select
-								options={technologyOptions}
-								isMulti
-								name="technologies"
-								value={technologyOptions.filter((option) =>
-									portfolioData.technologies.includes(
-										option.value
-									)
-								)}
-								onChange={handleTechnologiesChange}
-								className="basic-multi-select"
-								classNamePrefix="select"
-							/>
-						</div>
-						<button
-							type="submit"
-							className="w-full bg-gradient-to-r from-blue-500 to-purple-500 hover:from-purple-500 hover:to-blue-500 text-white font-bold py-3 px-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 transition-transform duration-300 transform hover:scale-105"
+					</div>
+					<div className="mb-6">
+						<label
+							htmlFor="technologies"
+							className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
 						>
-							Submit
-						</button>
-					</form>
-				</div>
-
-				<div className="w-full lg:w-[55%] text-base">
-					<PortfolioTable />
-				</div>
+							Technologies :
+						</label>
+						<Select
+							options={technologyOptions}
+							isMulti
+							name="technologies"
+							value={technologyOptions.filter((option) =>
+								portfolioData.technologies.includes(
+									option.value
+								)
+							)}
+							onChange={handleTechnologiesChange}
+							className="basic-multi-select"
+							classNamePrefix="select"
+						/>
+					</div>
+					<button
+						type="submit"
+						className="w-full bg-gradient-to-r from-blue-500 to-purple-500 hover:from-purple-500 hover:to-blue-500 text-white font-bold py-3 px-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 transition-transform duration-300 transform hover:scale-105"
+					>
+						Submit
+					</button>
+				</form>
 			</div>
 		</section>
 	);

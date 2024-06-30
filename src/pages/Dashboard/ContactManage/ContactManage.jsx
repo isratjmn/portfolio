@@ -1,7 +1,11 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import useAxios from "../../../Hooks/UseAxios";
+import { RiDeleteBin6Line } from "react-icons/ri";
+import { TbEditOff } from "react-icons/tb";
 
 const ContactManage = () => {
+	const [axiosSecure] = useAxios();
 	const [contactData, setPortfolioData] = useState({
 		location: "",
 		email: "",
@@ -11,13 +15,16 @@ const ContactManage = () => {
 	});
 
 	const [contactList, setContactList] = useState([]);
-
 	const handleChange = (e) => {
 		const { name, value } = e.target;
 		setPortfolioData((prevData) => ({
 			...prevData,
 			[name]: value,
 		}));
+	};
+
+	const openLink = (url) => {
+		window.open(url, "_blank");
 	};
 
 	const handleSubmit = async (e) => {
@@ -32,7 +39,7 @@ const ContactManage = () => {
 				linkedin: "",
 				github: "",
 			});
-			fetchContactData(); // Fetch updated contact data
+			fetchContactData();
 		} catch (error) {
 			console.error("Error submitting contact data", error);
 			alert("Error submitting contact data");
@@ -41,7 +48,8 @@ const ContactManage = () => {
 
 	const fetchContactData = async () => {
 		try {
-			const response = await axios.get("/api/contact");
+			const response = await axiosSecure.get("/api/contact");
+			console.log(response);
 			setContactList(response.data);
 		} catch (error) {
 			console.error("Error fetching contact data", error);
@@ -58,7 +66,7 @@ const ContactManage = () => {
 				Contact <span>Information</span>
 			</h2>
 			<div className="mx-auto p-4 flex flex-wrap gap-4">
-				<div className="w-full lg:w-[40%]">
+				<div className="w-full lg:w-[30%]">
 					<form
 						onSubmit={handleSubmit}
 						className="bg-white p-8 rounded-lg shadow-2xl max-w-2xl"
@@ -158,7 +166,7 @@ const ContactManage = () => {
 					</form>
 				</div>
 
-				<div className="w-full lg:w-[55%] text-base rounded-lg">
+				<div className="w-full lg:w-[60%] text-base rounded-lg">
 					<table className="min-w-full bg-white">
 						<thead className="bg-gray-200 shadow-lg rounded-md">
 							<tr>
@@ -180,40 +188,71 @@ const ContactManage = () => {
 								<th className="text-left py-3 px-4 text-[14px]">
 									Github
 								</th>
+								<th className="text-left py-3 px-4 text-[14px]">
+									Actions
+								</th>
 							</tr>
 						</thead>
 						<tbody>
 							{contactList.map((contact, index) => (
-								<tr key={contact.id}>
-									<td className="py-3 px-4">{index + 1}</td>
-									<td className="py-2 px-4">
+								<tr key={contact?.id}>
+									<td className="py-3 px-4 text-[13px]">
+										{index + 1}
+									</td>
+									<td className="py-2 px-4 text-[13px]">
 										{contact.location}
 									</td>
-									<td className="py-2 px-4">
+									<td className="py-2 px-4 text-[13px]">
 										{contact.email}
 									</td>
-									<td className="py-2 px-4">
-										{contact.contact}
+									<td className="py-2 px-4 text-[13px]">
+										{contact?.contact}
 									</td>
-									<td className="py-2 px-4">
-										<a
-											href={contact.linkedin}
+									<td className="py-2 px-4 text-[13px]">
+										<span
+											className="text-blue-500 font-bold hover:underline cursor-pointer"
+											onClick={() =>
+												openLink(contact?.linkedIn)
+											}
+										>
+											linkedIn
+										</span>
+									</td>
+									<td className="py-2 px-4 text-[13px]">
+										<span
+											className="text-blue-500 font-bold hover:underline cursor-pointer"
+											onClick={() =>
+												openLink(contact?.gitHub)
+											}
+										>
+											GitHub
+										</span>
+										{/* <a
+											href={contact?.gitHub}
 											target="_blank"
 											rel="noopener noreferrer"
 											className="text-blue-500 hover:underline"
 										>
-											{contact.linkedin}
-										</a>
+											{contact?.gitHub}
+										</a> */}
 									</td>
-									<td className="py-2 px-4 border-b">
-										<a
-											href={contact.github}
-											target="_blank"
-											rel="noopener noreferrer"
-											className="text-blue-500 hover:underline"
+									<td className="py-3 px-4 flex gap-2">
+										<button
+											onClick={() =>
+												handleEdit(contact.id)
+											}
+											className="flex items-center justify-center text-white bg-blue-500 hover:bg-blue-700 rounded p-2 text-lg"
 										>
-											{contact.github}
-										</a>
+											<TbEditOff className="text-xl" />
+										</button>
+										<button
+											onClick={() =>
+												handleDelete(contact.id)
+											}
+											className="flex items-center justify-center text-white bg-red-500 hover:bg-red-700 rounded p-2"
+										>
+											<RiDeleteBin6Line className="text-xl" />
+										</button>
 									</td>
 								</tr>
 							))}

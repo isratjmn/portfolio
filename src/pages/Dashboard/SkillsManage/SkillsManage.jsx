@@ -5,7 +5,6 @@ import SkillsTable from "../../../components/SkillsTable";
 
 const SkillsManage = () => {
 	const [skillData, setSkillData] = useState({
-		id: "",
 		title: "",
 		image: "",
 	});

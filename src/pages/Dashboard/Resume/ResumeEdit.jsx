@@ -45,7 +45,7 @@ const ResumeEdit = () => {
 				title: "",
 				desc: "",
 			});
-			// Refresh the resume data
+
 			const response = await axios.get("/api/resume");
 			setResumeData(response.data);
 		} catch (error) {
@@ -60,7 +60,7 @@ const ResumeEdit = () => {
 				Resume <span>Information</span>
 			</h2>
 			<div className=" mx-auto p-4 flex flex-wrap gap-2">
-				<div className="w-full lg:w-[40%]">
+				<div className="w-full lg:w-[30%]">
 					<form
 						onSubmit={handleSubmit}
 						className="bg-white p-8 rounded-lg shadow-2xl"
@@ -71,7 +71,7 @@ const ResumeEdit = () => {
 									htmlFor="startYear"
 									className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
 								>
-									Start Year
+									Start Date
 								</label>
 								<div className="flex">
 									<span className="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-300 border border-e-0 border-gray-300 rounded-s-md dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600">
@@ -92,7 +92,7 @@ const ResumeEdit = () => {
 									htmlFor="endYear"
 									className="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
 								>
-									End Year
+									End Date
 								</label>
 								<div className="flex">
 									<span className="inline-flex items-center px-3 text-sm text-gray-900 bg-gray-300 border border-e-0 border-gray-300 rounded-s-md dark:bg-gray-600 dark:text-gray-400 dark:border-gray-600">
@@ -163,7 +163,7 @@ const ResumeEdit = () => {
 						</button>
 					</form>
 				</div>
-				<div className="w-full lg:w-[50%] text-base">
+				<div className="w-full lg:w-[66%] text-base">
 					<ResumeEntries />
 				</div>
 			</div>

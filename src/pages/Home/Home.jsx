@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Profile1 from "../../assets/IMAGE_1.jpeg";
 import ParticlesContainer from "../../components/ParticlesContainer";
-// import Resume from "../../assets/Resume.pdf";
 import ResumeIsrat from "../../assets/resume_israt.pdf";
 import { FaDownload } from "react-icons/fa";
 import { TypeAnimation } from "react-type-animation";

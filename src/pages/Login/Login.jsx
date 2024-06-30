@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import LoginImg from "./../../assets/login-4.webp";
 import { Link } from "react-router-dom";
 import ParticlesContainer from "../../components/ParticlesContainer";
@@ -6,11 +6,19 @@ import "./Login.css";
 
 const Login = () => {
 	const [formData, setFormData] = useState({
-		username: "",
 		email: "",
 		password: "",
-		confirmPassword: "",
 	});
+
+	const [animate, setAnimate] = useState(true);
+
+	useEffect(() => {
+		const timer = setTimeout(() => {
+			setAnimate(false);
+		}, 5000); 
+
+		return () => clearTimeout(timer);
+	}, []);
 
 	const handleChange = (e) => {
 		const { name, value } = e.target;
@@ -42,7 +50,11 @@ const Login = () => {
 			</div>
 
 			<div className="flex-1 pr-36 flex justify-end items-center bg-gray-100">
-				<div className="max-w-full p-8 sm:p-12 bg-white rounded-lg shadow-lg w-full md:w-[80%] lg:w-[40%] relative">
+				<div
+					className={`max-w-full p-8 sm:p-12 bg-white rounded-lg shadow-lg w-full md:w-[80%] lg:w-[40%] relative ${
+						animate ? "animate-floating" : ""
+					}`}
+				>
 					<ParticlesContainer />
 					<h2 className="sectionTitleMedium text-center mb-8">
 						Login <span>IzmTechz</span>
