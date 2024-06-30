@@ -47,6 +47,7 @@ import SkillsManage from "./pages/Dashboard/SkillsManage/SkillsManage";
 import DashboardHome from "./pages/Dashboard/DashboardHome/DashboardHome";
 import Login from "./pages/Login/Login";
 import Register from "./pages/Register.jsx/Register";
+import ContactManage from "./pages/Dashboard/ContactManage/ContactManage";
 
 function App() {
 	return (
@@ -67,6 +68,10 @@ function App() {
 						<Route
 							path="skills-manage"
 							element={<SkillsManage />}
+						/>
+						<Route
+							path="contact-manage"
+							element={<ContactManage />}
 						/>
 						<Route
 							path="portfolio-manage"

@@ -1,7 +1,7 @@
-.colorBlockLogin {
+.colorBlockDashbaord {
 	position: fixed;
 	height: 100%;
-	width: 36%;
+  width: 14%;
 	background-color: var(--first-color);
 	top: 0;
 	left: 0;

@@ -12,6 +12,7 @@
   "dependencies": {
     "@emailjs/browser": "^3.11.0",
     "@heroicons/react": "^2.1.4",
+    "@react-spring/web": "^9.7.3",
     "aos": "^2.3.4",
     "axios": "^1.7.2",
     "flowbite": "^2.4.1",

@@ -285,6 +285,7 @@ const Portfolio = () => {
 					</div>
 				)}
 			</section>
+		
 		</>
 	);
 };

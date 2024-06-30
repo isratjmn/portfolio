@@ -48,16 +48,16 @@ export const links = [
 
 	{
 		id: 2,
-		name: "About",
-		icon: <FaUser className="navIcon" />,
-		path: "/about",
+		name: "Portfolio",
+		icon: <FaFolderOpen className="navIcon" />,
+		path: "/portfolio",
 	},
 
 	{
 		id: 3,
-		name: "Portfolio",
-		icon: <FaFolderOpen className="navIcon" />,
-		path: "/portfolio",
+		name: "About",
+		icon: <FaUser className="navIcon" />,
+		path: "/about",
 	},
 
 	{
