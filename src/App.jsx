@@ -19,6 +19,8 @@ import PortfolioEntries from "./pages/Dashboard/Portfolio/PortfolioEntries ";
 import PrivateRoutes from "./Routes/privateRoutes";
 import Articles from "./pages/Article/Articles";
 import ErrorPage from "./pages/Error/Error";
+import SingleBlog from "./components/SingleArticle";
+import BlogEditor from "./components/BlogEditor";
 
 function App() {
 	return (
@@ -39,6 +41,8 @@ function App() {
 					<Route path="/about" element={<About />} />
 					<Route path="/contact" element={<Contact />} />
 					<Route path="/blogs" element={<Articles />} />
+					<Route path="/blogs/:id" element={<SingleBlog />} />
+					<Route path="/write" element={<BlogEditor />} />
 					<Route path="/login" element={<Login />} />
 					<Route path="/register" element={<Register />} />
 					<Route

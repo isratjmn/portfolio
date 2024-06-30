@@ -105,8 +105,6 @@ const ResumeEntries = ({ fetchData }) => {
 		if (!date) {
 			return "Date Not Available";
 		}
-
-		console.log("Date:", date);
 		const formattedDate = format(new Date(date), "do MMMM, yyyy");
 		return formattedDate;
 	};

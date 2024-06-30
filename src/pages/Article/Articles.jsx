@@ -3,12 +3,15 @@ import { FaUser, FaCalendarAlt, FaTags } from "react-icons/fa";
 import ParticlesContainer from "../../components/ParticlesContainer";
 import useAxios from "../../Hooks/UseAxios";
 import { RotateLoader } from "react-spinners";
+import { CgMore } from "react-icons/cg";
+import { Link, useNavigate } from "react-router-dom";
 
 const RecentBlogs = () => {
 	const [axiosSecure] = useAxios();
 	const [blogs, setBlogs] = useState([]);
 	const [loading, setLoading] = useState(true);
 	const [error, setError] = useState(null);
+	const navigate = useNavigate();
 
 	useEffect(() => {
 		const fetchResumeData = async () => {
@@ -52,7 +55,7 @@ const RecentBlogs = () => {
 							/>
 
 							<div className="p-4 pb-4">
-								<span className="inline-block bg-purple-500 text-white px-3 py-1 rounded-lg text-sm font-semibold mb-2">
+								<span className="inline-block bg-purple-800 text-white px-4 py-1 rounded-md text-sm font-semibold mb-2">
 									{blog.category}
 								</span>
 								<h3 className="text-lg font-semibold mb-2">
@@ -68,9 +71,21 @@ const RecentBlogs = () => {
 									<FaTags className="mr-1" />
 									<span>{blog.comments} comments</span>
 								</div>
+								<Link to={`/blogs/${blog._id}`}>
+									<button className="mt-4 px-3 py-1  text-black rounded-lg">
+										<CgMore className="text-2xl" />
+									</button>
+								</Link>
 							</div>
 						</div>
 					))}
+				</div>
+				<div className="mx-auto flex text-center justify-center items-center">
+					<Link to="/write">
+						<button className="mt-8 px-6 py-3  bg-gradient-to-r from-blue-500 to-purple-500 text-white font-semibold rounded-lg shadow-lg transform transition duration-300 hover:scale-105 hover:shadow-2xl">
+							Write a New Blog
+						</button>
+					</Link>
 				</div>
 			</div>
 		</div>
