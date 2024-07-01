@@ -7,7 +7,6 @@ import {
 	FaGraduationCap,
 } from "react-icons/fa";
 import { MdDashboardCustomize } from "react-icons/md";
-
 import Theme1 from "./assets/purple.png";
 import Theme2 from "./assets/red.png";
 import Theme3 from "./assets/blueviolet.png";
@@ -36,7 +35,7 @@ import postGresSQLImage from "./assets/PostgreSQL.png";
 import graphQLImage from "./assets/graphQL.png";
 import mongodb from "./assets/mongoose.png";
 import prismaImage from "./assets/prisma.png";
-import { GrLogin } from "react-icons/gr";
+
 
 export const links = [
 	{
@@ -73,12 +72,12 @@ export const links = [
 		icon: <MdDashboardCustomize className="navIcon" />,
 		path: "/dashboard/DashboardHome",
 	},
-	{
+/* 	{
 		id: 6,
 		name: "Login",
 		icon: <GrLogin className="navIcon" />,
 		path: "/login",
-	},
+	}, */
 	/* {
     id: 6,
     name: isLoggedIn ? "Logout" : "Login",
