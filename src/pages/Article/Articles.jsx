@@ -38,7 +38,7 @@ const RecentBlogs = () => {
 	return (
 		<div className="py-12">
 			<ParticlesContainer />
-			<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+			<div className="max-w-7xl mx-auto sm:px-6 lg:px-2 gap-2">
 				<h2 className="sectionTitleMedium text-center my-10 text-4xl font-semibold">
 					Recent <span>Blogs</span>
 				</h2>

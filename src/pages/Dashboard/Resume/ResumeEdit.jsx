@@ -73,7 +73,7 @@ const ResumeEdit = () => {
 
 	return (
 		<section className="pt-8">
-			<Toaster position="top-center" />
+			<Toaster position="top-left" />
 			<h2 className="sectionTitleMedium text-center mb-8 text-4xl font-semibold">
 				Resume <span>Information</span>
 			</h2>
