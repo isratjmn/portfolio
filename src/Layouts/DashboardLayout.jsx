@@ -15,7 +15,7 @@ const DashboardLayout = () => {
 	return (
 		<div className="flex h-screen">
 			<div className="w-64 bg-gradient-to-r from-gray-300 to-gray-200 text-black flex flex-col">
-				<div className="flex items-center gap-2  justify-center mt-10">
+				<div className="flex items-center gap-2 justify-center mt-4">
 					<img
 						src={logo}
 						alt="logo"

@@ -13,7 +13,6 @@ const ResumeEntries = () => {
 		const fetchResumeData = async () => {
 			try {
 				const response = await axiosSecure.get("/api/resume");
-				console.log(response);
 				setResumeData(response.data);
 			} catch (error) {
 				setError(error);
@@ -27,14 +26,21 @@ const ResumeEntries = () => {
 	if (loading)
 		return (
 			<div className="flex items-start justify-center h-screen">
-				<RotateLoader color="#3498db" loading={loading} size={13} />
+				<RotateLoader color="#F6CFFC" loading={loading} size={13} />
 			</div>
 		);
-	if (error) return <p>Error: {error.message}</p>
+	if (error) return <p>Error: {error.message}</p>;
 
 	const formatDate = (date) => {
 		const formattedDate = format(new Date(date), "do MMMM, yyyy");
 		return formattedDate;
+	};
+
+	const truncateDescription = (desc, maxLength = 60) => {
+		if (desc.length > maxLength) {
+			return `${desc.substring(0, maxLength)}...`;
+		}
+		return desc;
 	};
 
 	return (
@@ -44,10 +50,16 @@ const ResumeEntries = () => {
 					<thead>
 						<tr>
 							<th className="py-2 px-4 border-b">SL No.</th>
-							<th className="py-2 px-4 border-b">Title</th>
+							<th className="py-2 px-4 border-b w-[10%]">
+								Title
+							</th>
 							<th className="py-2 px-4 border-b">Description</th>
-							<th className="py-2 px-4 border-b">Start Date</th>
-							<th className="py-2 px-4 border-b">End Date</th>
+							<th className="py-2 px-4 border-b w-[15%]">
+								Start Date
+							</th>
+							<th className="py-2 px-4 border-b w-[15%]">
+								End Date
+							</th>
 						</tr>
 					</thead>
 					<tbody>
@@ -59,7 +71,7 @@ const ResumeEntries = () => {
 									{entry.title}
 								</td>
 								<td className="py-2 px-4 border-b">
-									{entry.desc}
+									{truncateDescription(entry.desc)}
 								</td>
 								<td className="py-2 px-4 border-b">
 									{formatDate(entry.startDate)}

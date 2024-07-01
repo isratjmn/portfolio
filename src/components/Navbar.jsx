@@ -11,9 +11,14 @@ const Navbar = () => {
 	const { user, logOut } = useContext(AuthContext);
 
 	const handleLogOut = () => {
-		logOut()
-			.then(() => {})
-			.catch((error) => console.log(error));
+		const isConfirmed = window.confirm("Are you sure you want to log out?");
+		if (isConfirmed) {
+			logOut()
+				.then(() => {
+					console.log("User logged out");
+				})
+				.catch((error) => console.log(error));
+		}
 	};
 
 	const handleToggleMenu = () => {

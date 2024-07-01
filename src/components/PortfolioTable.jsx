@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
+
 import useAxios from "../Hooks/UseAxios";
 
 import { AiOutlineDelete } from "react-icons/ai";
@@ -11,11 +11,14 @@ const PortfolioTable = () => {
 	const [loading, setLoading] = useState(true);
 	const [error, setError] = useState(null);
 
+	const openLink = (url) => {
+		window.open(url, "_blank");
+	};
+
 	useEffect(() => {
 		const fetchResumeData = async () => {
 			try {
 				const response = await axiosSecure.get("/api/portfolios");
-				console.log(response);
 				setPortfolioData(response.data);
 			} catch (error) {
 				setError(error);
@@ -32,11 +35,15 @@ const PortfolioTable = () => {
 
 	const handleDelete = async (id) => {
 		try {
-			await axios.delete(`/api/portfolios/${id}`);
-			setPortfolioData((prevData) =>
-				prevData.filter((item) => item.id !== id)
-			);
-			alert("Portfolio item deleted successfully!");
+			const response = await axiosSecure.delete(`/api/portfolios/${id}`);
+			if (response.status === 200) {
+				setPortfolioData((prevData) =>
+					prevData.filter((item) => item._id !== id)
+				);
+				alert("Portfolio item deleted successfully!");
+			} else {
+				throw new Error("Failed to delete portfolio item");
+			}
 		} catch (error) {
 			console.error("Error deleting portfolio item", error);
 			alert("Error deleting portfolio item");
@@ -81,14 +88,29 @@ const PortfolioTable = () => {
 								<td className="py-3 px-4 text-[14px]">
 									{index + 1}
 								</td>
+
 								<td className="py-3 px-4 text-[14px]">
 									{item.title}
 								</td>
-								<td className="py-3 px-4 text-[14px]">
-									{item.clientGithub}
+								<td className="py-3 px-4 text-[13px]">
+									<span
+										className="text-blue-500 font-semibold hover:underline cursor-pointer"
+										onClick={() =>
+											openLink(item.clientGithub)
+										}
+									>
+										Client Code URL
+									</span>
 								</td>
-								<td className="py-3 px-4 text-[14px]">
-									{item.serverGithub}
+								<td className="py-3 px-4 text-[13px]">
+									<span
+										className="text-blue-500 font-semibold hover:underline cursor-pointer"
+										onClick={() =>
+											openLink(item.serverGithub)
+										}
+									>
+										Server Code URL
+									</span>
 								</td>
 								<td className="py-3 px-4 text-[14px]">
 									{item.live_link}
@@ -105,7 +127,7 @@ const PortfolioTable = () => {
 									</button>
 
 									<button
-										onClick={() => handleDelete(item?.id)}
+										onClick={() => handleDelete(item._id)}
 										className="flex items-center justify-center text-white bg-red-400 hover:bg-red-600 rounded p-2"
 									>
 										<AiOutlineDelete className="text-xl" />

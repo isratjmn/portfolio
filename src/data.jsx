@@ -36,7 +36,6 @@ import graphQLImage from "./assets/graphQL.png";
 import mongodb from "./assets/mongoose.png";
 import prismaImage from "./assets/prisma.png";
 
-
 export const links = [
 	{
 		name: "Home",
@@ -72,18 +71,6 @@ export const links = [
 		icon: <MdDashboardCustomize className="navIcon" />,
 		path: "/dashboard/DashboardHome",
 	},
-/* 	{
-		id: 6,
-		name: "Login",
-		icon: <GrLogin className="navIcon" />,
-		path: "/login",
-	}, */
-	/* {
-    id: 6,
-    name: isLoggedIn ? "Logout" : "Login",
-    icon: isLoggedIn ? <FaBriefcase className="navIcon" /> : <FaBriefcase className="navIcon" />,
-    path: isLoggedIn ? "/logout" : "/login",
-  }, */
 ];
 
 export const personalInfo = [
@@ -97,8 +84,6 @@ export const personalInfo = [
 		title: "Nationality : ",
 		description: "Bangladeshi",
 	},
-
-
 
 	{
 		id: 5,

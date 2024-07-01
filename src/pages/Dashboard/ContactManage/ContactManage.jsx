@@ -1,25 +1,26 @@
 import React, { useState, useEffect } from "react";
-import axios from "axios";
 import useAxios from "../../../Hooks/UseAxios";
 import { RiDeleteBin6Line } from "react-icons/ri";
 import { TbEditOff } from "react-icons/tb";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const ContactManage = () => {
 	const [axiosSecure] = useAxios();
-	const [contactData, setPortfolioData] = useState({
+	const [contactData, setContactData] = useState({
 		location: "",
-		email: "",
 		contact: "",
-		linkedin: "",
+		email: "",
 		github: "",
+		linkedin: "",
 	});
 
 	const [contactList, setContactList] = useState([]);
 	const handleChange = (e) => {
 		const { name, value } = e.target;
-		setPortfolioData((prevData) => ({
+		setContactData((prevData) => ({
 			...prevData,
-			[name]: value,
+			[name]: name === "contact" ? value.replace(/\D/, "") : value,
 		}));
 	};
 
@@ -29,27 +30,30 @@ const ContactManage = () => {
 
 	const handleSubmit = async (e) => {
 		e.preventDefault();
+
+		const contactDataToSend = {
+			...contactData,
+			contact: Number(contactData.contact),
+		};
 		try {
-			await axios.post("/api/contact", contactData);
-			alert("Contact data submitted successfully!");
-			setPortfolioData({
+			await axiosSecure.post("/api/contact", contactDataToSend);
+			toast.success("Contact data submitted successfully !");
+			setContactData({
 				location: "",
-				email: "",
 				contact: "",
-				linkedin: "",
+				email: "",
 				github: "",
+				linkedin: "",
 			});
 			fetchContactData();
 		} catch (error) {
-			console.error("Error submitting contact data", error);
-			alert("Error submitting contact data");
+			toast.success("Error submitting contact data");
 		}
 	};
 
 	const fetchContactData = async () => {
 		try {
 			const response = await axiosSecure.get("/api/contact");
-			console.log(response);
 			setContactList(response.data);
 		} catch (error) {
 			console.error("Error fetching contact data", error);
@@ -62,6 +66,7 @@ const ContactManage = () => {
 
 	return (
 		<div className="mx-auto p-4 ">
+			<ToastContainer />
 			<h2 className="sectionTitleMedium text-center mb-8 text-4xl font-semibold">
 				Contact <span>Information</span>
 			</h2>
@@ -102,6 +107,7 @@ const ContactManage = () => {
 									value={contactData.email}
 									onChange={handleChange}
 									className="rounded-lg bg-gray-100 border border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block w-full text-sm p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+									placeholder="Email"
 									required
 								/>
 							</div>
@@ -120,6 +126,7 @@ const ContactManage = () => {
 									value={contactData.contact}
 									onChange={handleChange}
 									className="rounded-lg bg-gray-100 border border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block w-full text-sm p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+									placeholder="******"
 									required
 								/>
 							</div>
@@ -136,6 +143,7 @@ const ContactManage = () => {
 									value={contactData.linkedin}
 									onChange={handleChange}
 									className="rounded-lg bg-gray-100 border border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block w-full text-sm p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+									placeholder="LinkedIn URL"
 									required
 								/>
 							</div>
@@ -153,6 +161,7 @@ const ContactManage = () => {
 								value={contactData.github}
 								onChange={handleChange}
 								className="rounded-lg bg-gray-100 border border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block w-full text-sm p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+								placeholder="Github URL"
 								required
 							/>
 						</div>
@@ -227,14 +236,6 @@ const ContactManage = () => {
 										>
 											GitHub
 										</span>
-										{/* <a
-											href={contact?.gitHub}
-											target="_blank"
-											rel="noopener noreferrer"
-											className="text-blue-500 hover:underline"
-										>
-											{contact?.gitHub}
-										</a> */}
 									</td>
 									<td className="py-3 px-4 flex gap-2">
 										<button

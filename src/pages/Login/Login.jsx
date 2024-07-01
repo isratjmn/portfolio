@@ -23,7 +23,7 @@ const Login = () => {
 	useEffect(() => {
 		const timer = setTimeout(() => {
 			setAnimate(false);
-		}, 5000);
+		}, 8000);
 		return () => clearTimeout(timer);
 	}, []);
 
@@ -56,100 +56,102 @@ const Login = () => {
 	};
 
 	return (
-		<div className="flex h-screen overflow-hidden">
-			<div className="hidden lg:flex items-center justify-center w-[40%] colorBlockLogin text-white">
-				<img
-					className="animate-bounce object-cover top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
-					src={LoginImg}
-					alt="AnimatedPhoto"
-					style={{
-						animationDuration: "3s",
-						animationTimingFunction: "ease-in-out",
-						width: "100%",
-						height: "auto",
-					}}
-				/>
-			</div>
+		<>
+			<div className="flex h-screen overflow-hidden">
+				<div className="hidden lg:flex items-center justify-center w-[40%] colorBlockLogin text-white">
+					<img
+						className="animate-bounce object-cover top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+						src={LoginImg}
+						alt="AnimatedPhoto"
+						style={{
+							animationDuration: "3s",
+							animationTimingFunction: "ease-in-out",
+							width: "100%",
+							height: "auto",
+						}}
+					/>
+				</div>
 
-			<div className="flex-1 pr-36 flex justify-end items-center bg-gray-100">
-				<div
-					className={`max-w-full p-8 sm:p-12 bg-white rounded-lg shadow-lg w-full md:w-[80%] lg:w-[40%] relative ${
-						animate ? "animate-floating" : ""
-					}`}
-				>
-					<ParticlesContainer />
-					<h2 className="sectionTitleMedium text-center mb-8">
-						Login <span>IzmTechz</span>
-					</h2>
-					<form
-						onSubmit={handleSubmit(onSubmit)}
-						className="space-y-6"
+				<div className="flex-1 pr-36 flex justify-end items-center bg-gray-100">
+					<div
+						className={`max-w-full p-8 sm:p-12 bg-white rounded-lg shadow-lg w-full md:w-[80%] lg:w-[40%] relative ${
+							animate ? "animate-floating" : ""
+						}`}
 					>
-						<div>
-							<label
-								htmlFor="email"
-								className="block text-sm font-medium text-gray-700"
-							>
-								Email
-							</label>
-							<input
-								type="email"
-								id="email"
-								{...register("email", {
-									required: "Email is required",
-								})}
-								className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 bg-gray-200"
-							/>
-							{errors.email && (
-								<p className="text-red-500">
-									{errors.email.message}
-								</p>
-							)}
-						</div>
-						<div>
-							<label
-								htmlFor="password"
-								className="block text-sm font-medium text-gray-700"
-							>
-								Password
-							</label>
-							<input
-								type="password"
-								id="password"
-								{...register("password", {
-									required: "Password is required",
-								})}
-								className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 bg-gray-200"
-							/>
-							{errors.password && (
-								<p className="text-red-500">
-									{errors.password.message}
-								</p>
-							)}
-						</div>
-						{errorMessage && (
-							<p className="text-red-500 text-center">
-								{errorMessage}
-							</p>
-						)}
-						<button
-							type="submit"
-							className="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white font-bold py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 hover:opacity-90 transition duration-300"
+						<ParticlesContainer />
+						<h2 className="sectionTitleMedium text-center mb-8">
+							Login <span>IzmTechz</span>
+						</h2>
+						<form
+							onSubmit={handleSubmit(onSubmit)}
+							className="space-y-6"
 						>
-							Login
-						</button>
-						<p className="font-semibold mt-4 text-center">
-							Don&apos;t have an account?
-							<Link to="/register">
-								<span className="text-violet-500 gap-4 ml-2">
-									Create an account
-								</span>
-							</Link>
-						</p>
-					</form>
+							<div>
+								<label
+									htmlFor="email"
+									className="block text-sm font-medium text-gray-700"
+								>
+									Email
+								</label>
+								<input
+									type="email"
+									id="email"
+									{...register("email", {
+										required: "Email is required",
+									})}
+									className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 bg-gray-200"
+								/>
+								{errors.email && (
+									<p className="text-red-500">
+										{errors.email.message}
+									</p>
+								)}
+							</div>
+							<div>
+								<label
+									htmlFor="password"
+									className="block text-sm font-medium text-gray-700"
+								>
+									Password
+								</label>
+								<input
+									type="password"
+									id="password"
+									{...register("password", {
+										required: "Password is required",
+									})}
+									className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 bg-gray-200"
+								/>
+								{errors.password && (
+									<p className="text-red-500">
+										{errors.password.message}
+									</p>
+								)}
+							</div>
+							{errorMessage && (
+								<p className="text-red-500 text-center">
+									{errorMessage}
+								</p>
+							)}
+							<button
+								type="submit"
+								className="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white font-bold py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 hover:opacity-90 transition duration-300"
+							>
+								Login
+							</button>
+							<p className="font-semibold mt-4 text-center">
+								Don&apos;t have an account?
+								<Link to="/register">
+									<span className="text-violet-500 gap-4 ml-2">
+										Create an account
+									</span>
+								</Link>
+							</p>
+						</form>
+					</div>
 				</div>
 			</div>
-		</div>
+		</>
 	);
 };
 
