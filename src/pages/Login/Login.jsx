@@ -1,36 +1,58 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import LoginImg from "./../../assets/login-4.webp";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import ParticlesContainer from "../../components/ParticlesContainer";
+import { useForm } from "react-hook-form";
 import "./Login.css";
+import { AuthContext } from "../../providers/Authprovider";
+import Swal from "sweetalert2";
 
 const Login = () => {
-	const [formData, setFormData] = useState({
-		email: "",
-		password: "",
-	});
-
+	const { signIn } = useContext(AuthContext);
+	const navigate = useNavigate();
+	const location = useLocation();
+	const from = location.state?.from?.pathname || "/";
+	const {
+		register,
+		handleSubmit,
+		formState: { errors },
+	} = useForm();
 	const [animate, setAnimate] = useState(true);
+	const [errorMessage, setErrorMessage] = useState("");
 
 	useEffect(() => {
 		const timer = setTimeout(() => {
 			setAnimate(false);
-		}, 5000); 
-
+		}, 5000);
 		return () => clearTimeout(timer);
 	}, []);
 
-	const handleChange = (e) => {
-		const { name, value } = e.target;
-		setFormData((prevData) => ({
-			...prevData,
-			[name]: value,
-		}));
-	};
-
-	const handleSubmit = (e) => {
-		e.preventDefault();
-		console.log(formData);
+	const onSubmit = async (data) => {
+		try {
+			const result = await signIn(data.email, data.password);
+			const user = result.user;
+			console.log(user);
+			Swal.fire({
+				title: "User Login Successfully...!!",
+				showClass: {
+					popup: "animate__animated animate__fadeInDown",
+				},
+				hideClass: {
+					popup: "animate__animated animate__fadeOutUp",
+				},
+			});
+			navigate(from, { replace: true });
+		} catch (error) {
+			if (error.code === "auth/user-not-found") {
+				setErrorMessage("Email Address not found");
+			} else if (error.code === "auth/wrong-password") {
+				setErrorMessage("Incorrect password");
+			} else {
+				setErrorMessage(
+					"An unexpected error occurred. Please try again."
+				);
+			}
+		}
 	};
 
 	return (
@@ -59,7 +81,10 @@ const Login = () => {
 					<h2 className="sectionTitleMedium text-center mb-8">
 						Login <span>IzmTechz</span>
 					</h2>
-					<form onSubmit={handleSubmit} className="space-y-6">
+					<form
+						onSubmit={handleSubmit(onSubmit)}
+						className="space-y-6"
+					>
 						<div>
 							<label
 								htmlFor="email"
@@ -70,12 +95,16 @@ const Login = () => {
 							<input
 								type="email"
 								id="email"
-								name="email"
-								value={formData.email}
-								onChange={handleChange}
+								{...register("email", {
+									required: "Email is required",
+								})}
 								className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 bg-gray-200"
-								required
 							/>
+							{errors.email && (
+								<p className="text-red-500">
+									{errors.email.message}
+								</p>
+							)}
 						</div>
 						<div>
 							<label
@@ -87,13 +116,22 @@ const Login = () => {
 							<input
 								type="password"
 								id="password"
-								name="password"
-								value={formData.password}
-								onChange={handleChange}
+								{...register("password", {
+									required: "Password is required",
+								})}
 								className="w-full px-4 py-3 rounded-md border border-gray-300 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 bg-gray-200"
-								required
 							/>
+							{errors.password && (
+								<p className="text-red-500">
+									{errors.password.message}
+								</p>
+							)}
 						</div>
+						{errorMessage && (
+							<p className="text-red-500 text-center">
+								{errorMessage}
+							</p>
+						)}
 						<button
 							type="submit"
 							className="w-full bg-gradient-to-r from-blue-500 to-purple-500 text-white font-bold py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400 hover:opacity-90 transition duration-300"

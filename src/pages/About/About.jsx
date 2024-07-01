@@ -32,7 +32,6 @@ const About = () => {
 			</section>
 
 			<div className="separator"></div>
-
 			<section className="resume">
 				<h3 className="sectionSubTitle subtitleCenter">
 					Experience & Education

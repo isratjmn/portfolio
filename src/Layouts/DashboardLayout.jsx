@@ -63,7 +63,7 @@ const DashboardLayout = () => {
 					>
 						<RiFileList3Fill className="text-xl text-black-500" />
 						<span className="ml-3 text-base">
-							Portfolio Entries
+							Portfolio Projects
 						</span>
 					</NavLink>
 

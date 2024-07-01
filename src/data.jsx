@@ -71,7 +71,7 @@ export const links = [
 		id: 5,
 		name: "Dashboard",
 		icon: <MdDashboardCustomize className="navIcon" />,
-		path: "/dashboard",
+		path: "/dashboard/DashboardHome",
 	},
 	{
 		id: 6,

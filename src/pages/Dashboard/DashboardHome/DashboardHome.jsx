@@ -1,186 +1,83 @@
 import React from "react";
-import { AiOutlineDownload } from "react-icons/ai";
 import {
-	BsFillEnvelopeOpenFill,
-	BsCart4,
-	BsPersonPlus,
-
-} from "react-icons/bs";
-/* import {
-	LineChart,
-	BarChart,
-	GeographyChart,
-	ProgressCircle,
-} from "../../components"; */
+	FaUser,
+	FaProjectDiagram,
+	FaEnvelope,
+	FaBlog,
+	FaCogs,
+} from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 const DashboardHome = () => {
-	const mockTransactions = [
-		{ txId: "TX123", user: "John Doe", date: "2024-06-30", cost: 123.45 },
-		{ txId: "TX124", user: "Jane Smith", date: "2024-06-29", cost: 234.56 },
-		// Add more transactions as needed
-	];
-
 	return (
-		<div className="p-6">
-			{/* HEADER */}
-			<div className="flex justify-between items-center mb-8">
-				<h1 className="text-3xl font-semibold text-gray-800">
-					Dashboard
-				</h1>
-				<button className="flex items-center space-x-2 bg-blue-500 text-white px-3 py-2 rounded-lg">
-					<AiOutlineDownload className="w-5 h-5" />
-					<span>Download Reports</span>
-				</button>
-			</div>
+		<div className="min-h-screen flex flex-col">
+			<header className="text-white pt-6">
+				<div className="mx-auto px-6 flex justify-between items-center">
+					<h2 className="sectionTitleMedium text-left justify-start items-start flex mb-2 text-4xl font-semibold gap-2">
+						Portfolio
+						<span> Dashboard</span>
+					</h2>
+				</div>
+			</header>
 
-			{/* GRID & CHARTS */}
-			<div className="grid grid-cols-1 md:grid-cols-2 gap-6 xl:grid-cols-3">
-				{/* StatBox components */}
-				<div className="bg-gray-200 p-4 rounded-lg">
-					<div className="flex items-center justify-center">
-						<BsFillEnvelopeOpenFill className="w-8 h-8 text-green-500" />
-					</div>
-					<h2 className="text-2xl font-bold text-center mt-4">
-						12,361
-					</h2>
-					<p className="text-gray-600 text-center">Emails Sent</p>
-					<div className="flex justify-between mt-4">
-						<span className="text-green-500 font-semibold">
-							+14%
-						</span>
-						<span className="text-gray-600">Progress: 75%</span>
-					</div>
-				</div>
-				<div className="bg-gray-200 p-4 rounded-lg">
-					<div className="flex items-center justify-center">
-						<BsCart4 className="w-8 h-8 text-green-500" />
-					</div>
-					<h2 className="text-2xl font-bold text-center mt-4">
-						431,225
-					</h2>
-					<p className="text-gray-600 text-center">Sales Obtained</p>
-					<div className="flex justify-between mt-4">
-						<span className="text-green-500 font-semibold">
-							+21%
-						</span>
-						<span className="text-gray-600">Progress: 50%</span>
-					</div>
-				</div>
-				<div className="bg-gray-200 p-4 rounded-lg">
-					<div className="flex items-center justify-center">
-						<BsPersonPlus className="w-8 h-8 text-green-500" />
-					</div>
-					<h2 className="text-2xl font-bold text-center mt-4">
-						32,441
-					</h2>
-					<p className="text-gray-600 text-center">New Clients</p>
-					<div className="flex justify-between mt-4">
-						<span className="text-green-500 font-semibold">
-							+5%
-						</span>
-						<span className="text-gray-600">Progress: 30%</span>
-					</div>
-				</div>
-				<div className="bg-gray-200 p-4 rounded-lg">
-					<div className="flex items-center justify-center">
-						<BsPersonPlus className="w-8 h-8 text-green-500" />
-					</div>
-					<h2 className="text-2xl font-bold text-center mt-4">
-						1,325,134
-					</h2>
-					<p className="text-gray-600 text-center">
-						Traffic Received
-					</p>
-					<div className="flex justify-between mt-4">
-						<span className="text-green-500 font-semibold">
-							+43%
-						</span>
-						<span className="text-gray-600">Progress: 80%</span>
-					</div>
-				</div>
-
-				{/* Revenue Generated */}
-				<div className="bg-gray-200 p-6 rounded-lg col-span-2">
-					<div className="flex items-center justify-between mb-4">
-						<h2 className="text-2xl font-bold text-gray-800">
-							Revenue Generated
-						</h2>
-						<button className="flex items-center space-x-2 bg-green-500 text-white px-3 py-2 rounded-lg">
-							<AiOutlineDownload className="w-5 h-5" />
-							<span>Download</span>
-						</button>
-					</div>
-					<h3 className="text-green-500 font-bold text-3xl">
-						$59,342.32
-					</h3>
-					<div className="h-60 mt-4">
-						<LineChart isDashboard={true} />
-					</div>
-				</div>
-
-				{/* Recent Transactions */}
-				<div className="bg-gray-200 p-4 rounded-lg col-span-2">
-					<h2 className="text-2xl font-bold text-gray-800 mb-4">
-						Recent Transactions
-					</h2>
-					{mockTransactions.map((transaction, index) => (
-						<div
-							key={index}
-							className="flex justify-between items-center py-2 border-b border-gray-400"
-						>
-							<div>
-								<h3 className="text-green-500 font-semibold">
-									{transaction.txId}
-								</h3>
-								<p className="text-gray-600">
-									{transaction.user}
-								</p>
-							</div>
-							<div className="text-gray-600">
-								{transaction.date}
-							</div>
-							<div className="bg-green-500 text-white px-3 py-1 rounded">
-								${transaction.cost}
-							</div>
+			<div className="flex flex-col md:flex-row flex-1">
+				<main className="flex-1 px-8  rounded-tl-3xl">
+					<div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-[80%]">
+						<div className="bg-gradient-to-br from-white to-blue-50 p-6 rounded-lg shadow-lg hover:shadow-xl transform transition-shadow duration-300">
+							<h2 className="text-2xl font-bold mb-4">Profile</h2>
+							<p className="text-gray-700">
+								Manage your personal profile information and
+								settings.
+							</p>
+							<Link
+								to="/dashboard/portfolio-manage"
+								className="mt-4 inline-block bg-violet-400 text-white py-2 px-4 rounded-lg hover:bg-violet-700 transition-colors duration-300"
+							>
+								Go to Profile
+							</Link>
 						</div>
-					))}
-				</div>
-
-				{/* Campaign */}
-				<div className="bg-gray-200 p-6 rounded-lg">
-					<h2 className="text-2xl font-bold text-gray-800">
-						Campaign
-					</h2>
-					<div className="flex flex-col items-center mt-4">
-						<ProgressCircle size="125" />
-						<h3 className="text-green-500 font-bold text-lg">
-							$48,352 revenue generated
-						</h3>
-						<p className="text-gray-600">
-							Includes extra misc expenditures and costs
-						</p>
+						<div className="bg-gradient-to-br from-white to-purple-50 p-6 rounded-lg shadow-lg hover:shadow-xl transform transition-shadow duration-300">
+							<h2 className="text-2xl font-bold mb-4">
+								Projects
+							</h2>
+							<p className="text-gray-700">
+								View and manage your projects.
+							</p>
+							<Link
+								to="/dashboard/portfolio-entries"
+								className="mt-4 inline-block bg-violet-400 text-white py-2 px-4 rounded-lg hover:bg-violet-700 transition-colors duration-300"
+							>
+								Go to Projects
+							</Link>
+						</div>
+						<div className="bg-gradient-to-br from-white to-pink-50 p-6 rounded-lg shadow-lg hover:shadow-xl transform transition-shadow duration-300">
+							<h2 className="text-2xl font-bold mb-4">Contact</h2>
+							<p className="text-gray-700">
+								Manage your contact information.
+							</p>
+							<Link
+								to="/dashboard/contact-manage"
+								className="mt-4 inline-block bg-violet-400 text-white py-2 px-4 rounded-lg hover:bg-violet-700 transition-colors duration-300"
+							>
+								Go to Contact
+							</Link>
+						</div>
+						<div className="bg-gradient-to-br from-white to-green-50 p-6 rounded-lg shadow-lg hover:shadow-xl transform transition-shadow duration-300">
+							<h2 className="text-2xl font-bold mb-4">
+								Articles
+							</h2>
+							<p className="text-gray-700">
+								Read and manage your blog posts.
+							</p>
+							<Link
+								to="/article"
+								className="mt-4 inline-block bg-violet-400 text-white py-2 px-4 rounded-lg hover:bg-violet-700 transition-colors duration-300"
+							>
+								Go to Article
+							</Link>
+						</div>
 					</div>
-				</div>
-
-				{/* Sales Quantity */}
-				<div className="bg-gray-200 p-6 rounded-lg">
-					<h2 className="text-2xl font-bold text-gray-800">
-						Sales Quantity
-					</h2>
-					<div className="h-60 mt-4">
-						<BarChart isDashboard={true} />
-					</div>
-				</div>
-
-				{/* Geography Based Traffic */}
-				<div className="bg-gray-200 p-6 rounded-lg">
-					<h2 className="text-2xl font-bold text-gray-800">
-						Geography Based Traffic
-					</h2>
-					<div className="h-48 mt-4">
-						<GeographyChart isDashboard={true} />
-					</div>
-				</div>
+				</main>
 			</div>
 		</div>
 	);
