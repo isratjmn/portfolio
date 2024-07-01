@@ -6,7 +6,7 @@ import { TbEditOff } from "react-icons/tb";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const Modal = ({ isOpen, onClose, onSave, skill, setSkill }) => {
+const SkillModal = ({ isOpen, onClose, onSave, skill, setSkill }) => {
 	if (!isOpen) return null;
 
 	return (
@@ -63,11 +63,11 @@ const Modal = ({ isOpen, onClose, onSave, skill, setSkill }) => {
 							onClick={onSave}
 							className="px-6 py-2 text-sm bg-gradient-to-r from-blue-500 to-purple-500 hover:from-purple-500 hover:to-blue-500 text-white rounded-lg hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-green-400 transition-colors duration-300 ease-in-out"
 						>
-							Update
+							Update Skill
 						</button>
 						<button
 							onClick={onClose}
-							className="px-6 py-2 text-sm bg-gray-600 text-white rounded-lg hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-gray-400 transition-colors duration-300 ease-in-out"
+							className="px-6 py-2 text-sm text-white rounded-lg  focus:outline-none focus:ring-2 focus:ring-gray-400 transition-colors duration-300 ease-in-out bg-gray-400 hover:bg-gray-500"
 						>
 							Cancel
 						</button>
@@ -160,7 +160,7 @@ const SkillsTable = () => {
 	return (
 		<div className="mx-auto lg:pr-10 md:pl-3 lg:pl-5">
 			<ToastContainer />
-			<Modal
+			<SkillModal
 				isOpen={editMode}
 				onClose={() => setEditMode(false)}
 				onSave={handleUpdate}
@@ -188,12 +188,12 @@ const SkillsTable = () => {
 								<td className="py-3 px-4">{index + 1}</td>
 								<td className="py-3 px-4">
 									<img
-										src={item.image}
-										alt={item.title}
+										src={item?.image}
+										alt={item?.title}
 										className="h-10 object-cover rounded-lg"
 									/>
 								</td>
-								<td className="py-3 px-4">{item.title}</td>
+								<td className="py-3 px-4">{item?.title}</td>
 								<td className="py-3 px-4 flex gap-2">
 									<button
 										onClick={() =>

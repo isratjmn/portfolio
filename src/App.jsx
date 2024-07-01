@@ -26,6 +26,7 @@ function App() {
 			<BrowserRouter>
 				<Navbar />
 				<Theme />
+
 				<Routes>
 					<Route index element={<Home />} />
 					<Route
