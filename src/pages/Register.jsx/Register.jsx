@@ -46,13 +46,16 @@ const Register = () => {
 							name: data.username,
 							email: data.email,
 						};
-						fetch("http://localhost:5000/api/users", {
-							method: "POST",
-							headers: {
-								"Content-Type": "application/json",
-							},
-							body: JSON.stringify(saveUser),
-						})
+						fetch(
+							"https://portfolio-server-x.vercel.app/api/users",
+							{
+								method: "POST",
+								headers: {
+									"Content-Type": "application/json",
+								},
+								body: JSON.stringify(saveUser),
+							}
+						)
 							.then((res) => res.json())
 							.then((data) => {
 								if (data.insertedId) {
