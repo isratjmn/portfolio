@@ -35,6 +35,7 @@ import postGresSQLImage from "./assets/PostgreSQL.png";
 import graphQLImage from "./assets/graphQL.png";
 import mongodb from "./assets/mongoose.png";
 import prismaImage from "./assets/prisma.png";
+import { ImBlog } from "react-icons/im";
 
 export const links = [
 	{
@@ -70,6 +71,12 @@ export const links = [
 		name: "Dashboard",
 		icon: <MdDashboardCustomize className="navIcon" />,
 		path: "/dashboard/DashboardHome",
+	},
+	{
+		id: 5,
+		name: "Blogs",
+		icon: <ImBlog className="navIcon" />,
+		path: "/blogs",
 	},
 ];
 

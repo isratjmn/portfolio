@@ -86,11 +86,11 @@ const ContactManage = () => {
 								</label>
 								<input
 									type="text"
-									id="location"
 									name="location"
 									value={contactData.location}
 									onChange={handleChange}
 									className="rounded-lg bg-gray-100 border border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block w-full text-sm p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+									placeholder="Location"
 									required
 								/>
 							</div>
@@ -238,14 +238,6 @@ const ContactManage = () => {
 										</span>
 									</td>
 									<td className="py-3 px-4 flex gap-2">
-										<button
-											onClick={() =>
-												handleEdit(contact.id)
-											}
-											className="flex items-center justify-center text-white bg-blue-500 hover:bg-blue-700 rounded p-2 text-lg"
-										>
-											<TbEditOff className="text-xl" />
-										</button>
 										<button
 											onClick={() =>
 												handleDelete(contact.id)

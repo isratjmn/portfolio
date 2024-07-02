@@ -6,6 +6,7 @@ import UseAuth from "./UseAuth";
 const axiosSecure = axios.create({
 	baseURL: "http://localhost:5000",
 });
+
 const useAxios = () => {
 	const { logOut } = UseAuth();
 	const navigate = useNavigate();
@@ -38,5 +39,4 @@ const useAxios = () => {
 
 	return [axiosSecure];
 };
-
 export default useAxios;

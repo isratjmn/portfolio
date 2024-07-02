@@ -101,6 +101,7 @@ const PortfolioManage = () => {
 								onChange={handleChange}
 								className="rounded-lg bg-gray-100 border border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block w-full text-sm p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
 								required
+								placeholder="Title"
 							/>
 						</div>
 						<div className="w-full md:w-1/2 px-2">
@@ -118,6 +119,7 @@ const PortfolioManage = () => {
 								onChange={handleChange}
 								className="rounded-lg bg-gray-100 border border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block w-full text-sm p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
 								required
+								placeholder="Client github URL"
 							/>
 						</div>
 					</div>
@@ -137,6 +139,7 @@ const PortfolioManage = () => {
 								onChange={handleChange}
 								className="rounded-lg bg-gray-100 border border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block w-full text-sm p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
 								required
+									placeholder="Server github URL"
 							/>
 						</div>
 						<div className="w-full md:w-1/2 px-2">
@@ -150,6 +153,7 @@ const PortfolioManage = () => {
 								onChange={handleChange}
 								className="rounded-lg bg-gray-100 border border-gray-300 text-gray-900 focus:ring-blue-500 focus:border-blue-500 block w-full text-sm p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
 								required
+									placeholder="Live Link"
 							/>
 						</div>
 					</div>

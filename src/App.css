@@ -129,13 +129,13 @@ img {
 
 .sectionTitle {
 	font-size: var(--big-font-size);
-	font-weight: var(--weight-700);
+	font-weight: var(--weight-600);
 	text-align: center;
-	margin-bottom: 70px;
+	margin-bottom: 50px;
 }
 .sectionTitleMedium {
 	font-size: var(--big-font-size);
-	font-weight: var(--weight-700);
+	font-weight: var(--weight-600);
 	text-align: center;
 	font-size: 34px !important;
 	font-weight: 700;
@@ -143,7 +143,7 @@ img {
 }
 .sectionTitleSmall {
 	font-size: var(--big-font-size);
-	font-weight: var(--weight-700);
+	font-weight: var(--weight-600);
 	text-align: center;
 	margin-bottom: 50px;
 	font-size: 14px;

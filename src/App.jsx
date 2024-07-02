@@ -17,6 +17,8 @@ import ContactManage from "./pages/Dashboard/ContactManage/ContactManage";
 import PortfolioManage from "./pages/Dashboard/Portfolio/PortfolioManage";
 import PortfolioEntries from "./pages/Dashboard/Portfolio/PortfolioEntries ";
 import PrivateRoutes from "./Routes/privateRoutes";
+import Articles from "./pages/Article/Articles";
+import ErrorPage from "./pages/Error/Error";
 
 function App() {
 	return (
@@ -26,9 +28,16 @@ function App() {
 				<Theme />
 				<Routes>
 					<Route index element={<Home />} />
+					<Route
+						path="*"
+						element={
+							<ErrorPage status={404} message="Page not found" />
+						}
+					/>
 					<Route path="/portfolio" element={<Portfolio />} />
 					<Route path="/about" element={<About />} />
 					<Route path="/contact" element={<Contact />} />
+					<Route path="/blogs" element={<Articles />} />
 					<Route path="/login" element={<Login />} />
 					<Route path="/register" element={<Register />} />
 					<Route
@@ -59,6 +68,7 @@ function App() {
 							path="portfolio-entries"
 							element={<PortfolioEntries />}
 						/>
+
 						<Route path="resume-manage" element={<ResumeEdit />} />
 					</Route>
 				</Routes>
